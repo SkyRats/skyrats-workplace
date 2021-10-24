@@ -1,0 +1,8 @@
+*~
+*.swp
+*.swo
+*.swn
+*.pyc
+.gitman
+.gitman.old
+.tmuxinator.yml
