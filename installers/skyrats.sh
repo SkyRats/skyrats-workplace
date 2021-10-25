@@ -54,9 +54,6 @@ if [ "$num" -lt "1" ]; then
 $line" >> ~/.bashrc
 fi
 
-cd "$MY_PATH/../../.."
-catkin build
-
 line="source ~/skyrats_ws/devel/setup.bash"
 
 num=`cat ~/.bashrc | grep "$line" | wc -l`
