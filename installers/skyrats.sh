@@ -8,15 +8,23 @@ sudo apt-get -y install git
 
 ## | ----------------------- install ROS ---------------------- |
 
-$MY_PATH/ros.sh
+bash $MY_PATH/ros.sh
+
+## | -------------- install general dependencies -------------- |
+
+bash $MY_PATH/general.sh
 
 ## | --------------------- install gitman --------------------- |
 
-$MY_PATH/gitman.sh
+bash $MY_PATH/gitman.sh
 
 ## | ---------------- install gitman submodules --------------- |
 
 gitman install --force
+
+## | --------------------- install mavros --------------------- |
+
+bash $MY_PATH/mavros.sh
 
 ## | ---------------- install px4 dependencies ---------------- |
 

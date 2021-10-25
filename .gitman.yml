@@ -11,6 +11,28 @@ sources:
         target: ros_packages/px4_firmware
     scripts:
       - git submodule update --init --recursive --depth 
+  - repo: git@github.com:mavlink/mavlink.git
+    name: mavlink
+    rev: 0dc40a07d97e665c563600081840c45b60bae1cf
+    type: git
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: ros_packages
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/ctu-mrs/mavros
+    name: mavros
+    rev: added_dialect_file
+    type: git
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: ros_packages/mavros
+    scripts:
+      - git submodule update --init --recursive
 default_group: ''
 groups:
   -
