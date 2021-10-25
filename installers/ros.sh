@@ -2,8 +2,6 @@
 
 echo "$0: Installing ROS"
 
-# add repository for ignition library
-sudo apt-get -y install wget lsb-release gnupg
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 sudo apt-get -y update
@@ -17,11 +15,11 @@ sudo apt-get -y update
 
 sudo apt-get -y install ros-noetic-desktop-full
 
-num=`cat ~/.bashrc | grep "/opt/ros/$ROS_DISTRO/setup.bash" | wc -l`
+num=`cat ~/.bashrc | grep "/opt/ros/noetic/setup.bash" | wc -l`
 if [ "$num" -lt "1" ]; then
 
   # set bashrc
   echo "
-source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
+source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 
 fi

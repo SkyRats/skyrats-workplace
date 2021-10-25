@@ -52,6 +52,19 @@ if [ "$num" -lt "1" ]; then
   # set bashrc
   echo "
 $line" >> ~/.bashrc
-
 fi
 
+cd "$MY_PATH/../../.."
+catkin build
+
+line="source ~/skyrats_ws/src/devel/setup.bash"
+
+num=`cat ~/.bashrc | grep "$line" | wc -l`
+if [ "$num" -lt "1" ]; then
+
+  echo "Adding '$line' to your .bashrc"
+
+  # set bashrc
+  echo "
+$line" >> ~/.bashrc
+fi
