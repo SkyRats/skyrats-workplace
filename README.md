@@ -1,7 +1,7 @@
-# skyrats-workplace
+# Skyrats workplace
 Skyrats autonomous drone team developmet environment for quadcopters in real life and simulations
 
-## installation
+## How to install?
 To install in a fresh ubuntu follow these steps:
 ```bash
 mkdir -p skyrats_ws/src
@@ -22,7 +22,7 @@ The skyrats.sh bash script will install everything you need to start your autono
 
 When the script finishes feel free to **build your catkin workspace** and source it, be careful about it crashing your pc (run catkin build -j2 instead if you think it will)
 
-## using the workplace
+## Using this workplace
 To run a simulation simply run:
 ```bash
 roslaunch px4 mavros_posix_sitl.launch
