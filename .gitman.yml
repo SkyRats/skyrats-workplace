@@ -11,15 +11,15 @@ sources:
         target: ros_packages/px4_firmware
     scripts:
       - git submodule update --init --recursive --depth 
-  - repo: git@github.com:mavlink/mavlink.git
-    name: mavlink
+  - repo: https://github.com/mavlink/mavlink-gbp-release
+    name: mavlink-gbp-release
     rev: 0dc40a07d97e665c563600081840c45b60bae1cf
     type: git
     sparse_paths:
       -
     links:
       - source: ''
-        target: ros_packages
+        target: ros_packages/mavlink
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mavros
