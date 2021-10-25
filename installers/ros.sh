@@ -23,3 +23,6 @@ if [ "$num" -lt "1" ]; then
 source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 
 fi
+
+cd
+source /opt/ros/noetic/setup.bash
