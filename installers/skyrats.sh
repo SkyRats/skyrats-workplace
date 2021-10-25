@@ -57,7 +57,7 @@ fi
 cd "$MY_PATH/../../.."
 catkin build
 
-line="source ~/skyrats_ws/src/devel/setup.bash"
+line="source ~/skyrats_ws/devel/setup.bash"
 
 num=`cat ~/.bashrc | grep "$line" | wc -l`
 if [ "$num" -lt "1" ]; then
