@@ -65,3 +65,5 @@ if [ "$num" -lt "1" ]; then
   echo "
 $line" >> ~/.bashrc
 fi
+
+bash $MY_PATH/qgroundcontrol.sh

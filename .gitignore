@@ -6,3 +6,4 @@
 .gitman
 .gitman.old
 .tmuxinator.yml
+*.AppImage
