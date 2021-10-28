@@ -53,7 +53,7 @@ To run a simulation simply run:
 ```bash
 roslaunch px4 mavros_posix_sitl.launch
 ```
-For real drones open QGroundControl.AppImage (with double click) to check the mavlink connectiong, and then go for this command when you want ROS to start working:
+For real drones open QGroundControl.AppImage (with double click) to check the mavlink connection, and then go for this command when you want ROS to start working:
 ```bash
 roslaunch mavros px4.launch
 ```
