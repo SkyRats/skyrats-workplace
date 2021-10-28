@@ -25,9 +25,13 @@ Congrats! At this point you should have ros noetic, mavlink, mavros, the px4 fir
 We will now run your first quadcopter simulation, for that we must compile the px4 firmware and make it work with gazebo, so type the following:
 
 ```bash
-cd ~/skyrats_ws/src/skyrats-workplace/ros_packages/px4_firmware
+cd ~/skyrats_ws/src/skyrats-workplace/ros_packages
 
-sudo make px4_sitl gazebo
+sudo chmod 777 px4_firmware -R
+
+cd px4_firmware
+
+make px4_sitl gazebo
 ```
 If everything went right, you should be seeing and IRIS drone in an empty simulation enviroment, to see it flying type the following **in the same terminal you ran the make command**:
 
