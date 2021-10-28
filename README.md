@@ -44,7 +44,6 @@ Now, we need to make this simulation work with ROS (so that we can send complex 
 To do so, try the following: (if your pc isn't great put a -j2 flag in the build command or it might crash)
 ```bash
 cd ~/skyrats_ws
-source devel/setup.bash
 catkin init
 catkin config
 catkin build
