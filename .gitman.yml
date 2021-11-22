@@ -1,8 +1,8 @@
 location: .gitman
 sources:
-  - repo: git@github.com:PX4/PX4-Autopilot.git
+  - repo: https://github.com/ctu-mrs/px4_firmware.git
     name: px4_firmware
-    rev: 9646b49b6058e1436d5d50b30926c6b9f96d625f
+    rev: 1.11.2
     type: git
     sparse_paths:
       -
@@ -11,9 +11,9 @@ sources:
         target: ros_packages/px4_firmware
     scripts:
       - git submodule update --init --recursive --depth 
-  - repo: git@github.com:mavlink/mavlink.git
-    name: mavlink
-    rev: 5309ba449a3dc6d7ad84fa7ebeb6deee040e4a04
+  - repo: https://github.com/mavlink/mavlink-gbp-release
+    name: mavlink-gbp-release
+    rev: 0dc40a07d97e665c563600081840c45b60bae1cf
     type: git
     sparse_paths:
       -
@@ -22,9 +22,9 @@ sources:
         target: ros_packages/mavlink
     scripts:
       - git submodule update --init --recursive
-  - repo: git@github.com:mavlink/mavros.git
+  - repo: https://github.com/ctu-mrs/mavros
     name: mavros
-    rev: c6c609a2642a6bf875c96987e6856607345fea3f
+    rev: added_dialect_file
     type: git
     sparse_paths:
       -

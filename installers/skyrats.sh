@@ -31,9 +31,6 @@ bash $MY_PATH/mavros.sh
 if [ -e /home/$USER/.local/lib ]; then
   sudo chown $USER /home/$USER/.local/lib -R
 fi
-sudo -H pip3 install kconfiglib
-sudo -H pip3 install --user jsonschema
-
 
 sudo bash $MY_PATH/../ros_packages/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tool
 
