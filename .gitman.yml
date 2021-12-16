@@ -2,7 +2,7 @@ location: .gitman
 sources:
   - repo: git@github.com:PX4/PX4-Autopilot.git
     name: px4_firmware
-    rev: 9646b49b6058e1436d5d50b30926c6b9f96d625f
+    rev: ecc2ca7f9829cc0ca70fae7583877d8a62c06d3e
     type: git
     sparse_paths:
       -
