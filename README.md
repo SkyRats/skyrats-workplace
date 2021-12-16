@@ -1,5 +1,5 @@
 # Skyrats workplace
-Skyrats autonomous drone team developmet environment for quadcopters in real life and simulations
+Skyrats autonomous drone team developmet environment for quadcopters in real life and simulations using ros noetic (the final ros1 distro)
 
 ## How to install?
 To install in a fresh ubuntu follow these steps:
