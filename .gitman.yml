@@ -1,19 +1,19 @@
 location: .gitman
 sources:
   - repo: git@github.com:PX4/PX4-Autopilot.git
-    name: px4_firmware
-    rev: ecc2ca7f9829cc0ca70fae7583877d8a62c06d3e
+    name: PX4-Autopilot
+    rev: v1.12.3
     type: git
     sparse_paths:
       -
     links:
       - source: ''
-        target: ros_packages/px4_firmware
+        target: ros_packages/PX4-Autopilot
     scripts:
       - git submodule update --init --recursive --depth 
-  - repo: git@github.com:mavlink/mavlink.git
+  - repo: git@github.com:mavlink/mavlink-gbp-release.git
     name: mavlink
-    rev: 5309ba449a3dc6d7ad84fa7ebeb6deee040e4a04
+    rev: debian/ros-noetic-mavlink_2020.9.10-1_focal
     type: git
     sparse_paths:
       -
@@ -24,7 +24,7 @@ sources:
       - git submodule update --init --recursive
   - repo: git@github.com:mavlink/mavros.git
     name: mavros
-    rev: c6c609a2642a6bf875c96987e6856607345fea3f
+    rev: 1.4.0
     type: git
     sparse_paths:
       -
