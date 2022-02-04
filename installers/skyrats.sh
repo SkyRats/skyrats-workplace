@@ -4,11 +4,13 @@
 MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd )`
 cd "$MY_PATH"
+
+## | ----------------------- install git ---------------------- |
 sudo apt-get -y install git
 
-## | ----------------------- install ROS ---------------------- |
+## | ----------------------- install ROS2 ---------------------- |
 
-bash $MY_PATH/ros.sh
+bash $MY_PATH/ros2.sh
 
 ## | -------------- install general dependencies -------------- |
 
