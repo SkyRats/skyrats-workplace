@@ -11,4 +11,5 @@ if [ "$num" -lt "1" ]; then
 
   echo "Adding '$COMMAND2' to your .bashrc"
   echo "$COMMAND2" >> ~/.bashrc
+  
 fi
