@@ -14,7 +14,7 @@ if [ $SUBLOCALE != "UTF-8"  ]; then
     exit 0
 fi
 
-# Add universe
+# Add universe repository
 sudo apt install software-properties-common
 sudo add-apt-repository universe
 
@@ -24,16 +24,23 @@ sudo apt install curl gnupg lsb-release
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
-# Install ROS
+## Install ROS
 sudo apt update
 sudo apt install ros-galactic-desktop
 
-# Sourcing the setup script
+## Sourcing the setup script
 source /opt/ros/galactic/setup.bash
-echo "# For ROS 2:" >> ~/.bashrc
-echo "source /opt/ros/galactic/setup.bash" >> ~/.bashrc
 
-# Also ensure that you do not have source /opt/ros/${ROS_DISTRO}/setup.bash in your .bashrc
-# *********************** (Do we need to implement it?)
-# (eh para, caso tenha outro ros, n dê conflito rodando dois setup.bash)
+## Add ROS' setup.bash in bash.rc 
+COMMAND="source /opt/ros/galactic/setup.bash"
+num=`cat ~/.bashrc | grep "$COMMAND" | wc -l`
+if [ "$num" -lt "1" ]; then
 
+  echo "Adding '$COMMAND' to your .bashrc"
+
+  # Set bashrc
+  echo "$COMMAND" >> ~/.bashrc
+fi
+
+## Install RQT
+sudo apt install ~nros-galactic-rqt*

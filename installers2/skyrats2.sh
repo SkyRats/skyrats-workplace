@@ -1,71 +1,62 @@
 #!/bin/bash
 
-
+## Go to this file's path
 MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd )`
 cd "$MY_PATH"
+
+## Add description in bash.rc
+LINE="# SKYRATS setups:"
+NUM=`cat ~/.bashrc | grep "$LINE" | wc -l`
+if [ "$num" -lt "1" ]; then
+
+  echo "Adding '$LINE' to your .bashrc"
+  echo "$LINE" >> ~/.bashrc
+  
+fi
+
+sudo apt update
 
 ## | ----------------------- install git ---------------------- |
 sudo apt-get -y install git
 
 ## | ----------------------- install ROS2 ---------------------- |
 
-bash $MY_PATH/ros2.sh
+source $MY_PATH/ros2.sh
 
-## | -------------- install general dependencies -------------- |
+## | ----------------------- create skyrats_ws ---------------------- |
 
-bash $MY_PATH/general.sh
+source $MY_PATH/ros2_ws.sh
+
+## | -------------- install others dependencies -------------- |
+
+source $MY_PATH/others.sh
 
 ## | --------------------- install gitman --------------------- |
 
-bash $MY_PATH/gitman.sh
-
-## | ---------------- install gitman submodules --------------- |
-
-gitman install --force
+source $MY_PATH/gitman.sh
 
 ## | --------------------- install mavros --------------------- |
 
-bash $MY_PATH/mavros.sh
+source $MY_PATH/mavros.sh
 
 ## | ---------------- install px4 dependencies ---------------- |
 
-if [ -e /home/$USER/.local/lib ]; then
-  sudo chown $USER /home/$USER/.local/lib -R
-fi
+source $MY_PATH/px4.sh
 
-sudo bash $MY_PATH/../ros_packages/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tool
+## | ---------------- install qgroundcontrol ---------------- |
+source $MY_PATH/qgroundcontrol.sh
 
-sudo apt-get update
-#to fix mrs_gazebo_common_resources build on Ubuntu 20.04
-sudo apt-get upgrade -y libignition-common3*
-sudo -H pip3 install --user packaging
-sudo apt-get -y install python3-packaging
-sudo apt-get -y install python3-toml
-sudo -H pip3 install --user toml
-sudo apt-get -y install 'libgstreamer1.0-dev'
-line="source /usr/share/gazebo/setup.sh"
 
-num=`cat ~/.bashrc | grep "$line" | wc -l`
+# TODO: we must move to other files ↓
+# to ros2.sh??
+
+# Add gazebo's setup.bash in bash.rc 
+COMMAND1="source /usr/share/gazebo/setup.sh"
+num=`cat ~/.bashrc | grep "$COMMAND1" | wc -l`
 if [ "$num" -lt "1" ]; then
 
-  echo "Adding '$line' to your .bashrc"
+  echo "Adding '$COMMAND1' to your .bashrc"
+  echo "$COMMAND1" >> ~/.bashrc
 
-  # set bashrc
-  echo "
-$line" >> ~/.bashrc
 fi
-
-line="source ~/skyrats_ws/devel/setup.bash"
-
-num=`cat ~/.bashrc | grep "$line" | wc -l`
-if [ "$num" -lt "1" ]; then
-
-  echo "Adding '$line' to your .bashrc"
-
-  # set bashrc
-  echo "
-$line" >> ~/.bashrc
-fi
-
-bash $MY_PATH/qgroundcontrol.sh
