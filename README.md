@@ -4,6 +4,8 @@ Skyrats autonomous drone team developmet environment for quadcopters in real lif
 ## How to install?
 To install in a fresh ubuntu follow these steps:
 ```bash
+cd ~/
+
 mkdir -p skyrats_ws/src
 
 cd skyrats_ws/src
