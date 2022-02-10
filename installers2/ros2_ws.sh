@@ -5,12 +5,11 @@ NAME=skyrats_ws
 
 echo "$0: preparing ${NAME}"
 
-## TODO: install colcon e create workspace
+## Install colcon e create workspace
 sudo apt install -y python3-colcon-common-extensions
 mkdir -p ~/${NAME}/src
 cd ~/${NAME}
 colcon build --symlink-install
-
 
 ## Add colcon_cd dependecies in .bashrc 
 COMMAND="source /usr/share/colcon_cd/function/colcon_cd.sh"
