@@ -17,7 +17,7 @@ sudo apt-get -y install \
   #python3-crcmod\ 
   #python3-lxml\ (mavlink)
 
-## Perguntar para a gabs:
+## TODO:Perguntar para a gabs:
 sudo apt install ros-galactic-eigen3-cmake-module
 sudo pip3 install -U empy pyros-genmsg setuptools
 

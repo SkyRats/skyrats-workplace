@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 echo "$0: installing ROS 2"
 
-# Check for UTF-8 
+## Check for UTF-8 
 LOCALE=`locale`
 SUBLOCALE=${LOCALE:11:5}
 if [ $SUBLOCALE != "UTF-8"  ]; then
@@ -14,11 +14,11 @@ if [ $SUBLOCALE != "UTF-8"  ]; then
     exit 0
 fi
 
-# Add universe repository
+## Add universe repository
 sudo apt install software-properties-common
 sudo add-apt-repository universe
 
-# Add ROS repository
+## Add ROS repository
 sudo apt update
 sudo apt install curl gnupg lsb-release
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg

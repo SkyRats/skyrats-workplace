@@ -6,7 +6,7 @@ MY_PATH=`( cd "$MY_PATH" && pwd )`
 cd "$MY_PATH"
 
 ## Add description in bash.rc
-LINE="# SKYRATS setups:"
+LINE="## SKYRATS setups:"
 NUM=`cat ~/.bashrc | grep "$LINE" | wc -l`
 if [ "$num" -lt "1" ]; then
 
@@ -18,6 +18,7 @@ fi
 sudo apt update
 
 ## | ----------------------- install git ---------------------- |
+
 sudo apt-get -y install git
 
 ## | ----------------------- install ROS2 ---------------------- |
@@ -34,7 +35,7 @@ bash $MY_PATH/others.sh
 
 ## | --------------------- install gitman --------------------- |
 
-bash $MY_PATH/gitman.sh
+bash $MY_PATH/gitman2.sh
 
 ## | ------------------- install fastRTPS --------------------- |
 

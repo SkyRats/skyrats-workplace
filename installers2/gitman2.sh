@@ -5,8 +5,7 @@ sudo apt-get -y install python3-pip python3-setuptools
 sudo pip3 install gitman
 sudo -H pip3 install gitman
 
-#TODO: study the necessity of command repetition 
-
 ## Install gitman submodules
-## PX4, Mavlink
+# (PX4, Mavlink and Mavros)
+# (we won't use mavros with ros2)
 gitman install --force
