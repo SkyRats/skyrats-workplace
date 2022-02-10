@@ -47,16 +47,3 @@ source $MY_PATH/px4.sh
 ## | ---------------- install qgroundcontrol ---------------- |
 source $MY_PATH/qgroundcontrol.sh
 
-
-# TODO: we must move to other files ↓
-# to ros2.sh??
-
-# Add gazebo's setup.bash in bash.rc 
-COMMAND1="source /usr/share/gazebo/setup.sh"
-num=`cat ~/.bashrc | grep "$COMMAND1" | wc -l`
-if [ "$num" -lt "1" ]; then
-
-  echo "Adding '$COMMAND1' to your .bashrc"
-  echo "$COMMAND1" >> ~/.bashrc
-
-fi

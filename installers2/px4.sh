@@ -11,8 +11,6 @@ if [ -e /home/$USER/.local/lib ]; then
   sudo chown $USER /home/$USER/.local/lib -R
 fi
 
-#TODO: clone PX4??????
-
 ## Run Ubuntu.sh from px4
 #TODO: certificate where we am and where px4 is cloned
 sudo bash $MY_PATH/../ros_packages/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tool
@@ -26,3 +24,13 @@ sudo -H pip3 install --user toml
 sudo apt-get -y install 'libgstreamer1.0-dev'
 
 #TODO: study the necessity of command repetetion (pip and apt)
+
+# Add gazebo's setup.bash in bash.rc 
+COMMAND1="source /usr/share/gazebo/setup.sh"
+num=`cat ~/.bashrc | grep "$COMMAND1" | wc -l`
+if [ "$num" -lt "1" ]; then
+
+  echo "Adding '$COMMAND1' to your .bashrc"
+  echo "$COMMAND1" >> ~/.bashrc
+
+fi
