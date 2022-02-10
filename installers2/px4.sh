@@ -12,7 +12,7 @@ if [ -e /home/$USER/.local/lib ]; then
 fi
 
 ## Run Ubuntu.sh from px4
-#TODO: certificate where we am and where px4 is cloned
+# (px4 was cloned by gitman into ros_packages)
 sudo bash $MY_PATH/../ros_packages/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tool
 
 ## Fix mrs_gazebo_common_resources build on Ubuntu 20.04
@@ -23,9 +23,7 @@ sudo apt-get -y install python3-toml
 sudo -H pip3 install --user toml
 sudo apt-get -y install 'libgstreamer1.0-dev'
 
-#TODO: study the necessity of command repetetion (pip and apt)
-
-# Add gazebo's setup.bash in bash.rc 
+## Add gazebo's setup.bash in bash.rc 
 COMMAND1="source /usr/share/gazebo/setup.sh"
 num=`cat ~/.bashrc | grep "$COMMAND1" | wc -l`
 if [ "$num" -lt "1" ]; then

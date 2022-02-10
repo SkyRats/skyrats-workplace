@@ -1,6 +1,5 @@
 #! /usr/bin/env bash
 
-
 # |----------- ROS -----------|
 echo "$0: installing ROS 2"
 
