@@ -4,8 +4,8 @@ echo "$0: installing general dependencies"
 sudo apt-get -y install \
   #libeigen3-dev\
   libopencv-dev\
-  libgeographic-dev\
-  geographiclib-tools\
+  #libgeographic-dev\ (mavros)
+  #geographiclib-tools\ (mavros)
   cmake\
 
 ## Phyton3 packages

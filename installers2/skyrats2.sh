@@ -22,28 +22,31 @@ sudo apt-get -y install git
 
 ## | ----------------------- install ROS2 ---------------------- |
 
-source $MY_PATH/ros2.sh
+bash $MY_PATH/ros2.sh
 
 ## | ----------------------- create skyrats_ws ---------------------- |
 
-source $MY_PATH/ros2_ws.sh
+bash $MY_PATH/ros2_ws.sh
 
 ## | -------------- install others dependencies -------------- |
 
-source $MY_PATH/others.sh
+bash $MY_PATH/others.sh
 
 ## | --------------------- install gitman --------------------- |
 
-source $MY_PATH/gitman.sh
+bash $MY_PATH/gitman.sh
 
-## | --------------------- install mavros --------------------- |
+## | ------------------- install fastRTPS --------------------- |
 
-source $MY_PATH/mavros.sh
+bash $MY_PATH/microRTPS.sh
+
+## | ---------------- install qgroundcontrol ---------------- |
+
+bash $MY_PATH/qgroundcontrol.sh
 
 ## | ---------------- install px4 dependencies ---------------- |
 
-source $MY_PATH/px4.sh
+bash $MY_PATH/px4.sh
 
-## | ---------------- install qgroundcontrol ---------------- |
-source $MY_PATH/qgroundcontrol.sh
+
 

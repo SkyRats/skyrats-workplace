@@ -8,5 +8,5 @@ sudo -H pip3 install gitman
 #TODO: study the necessity of command repetition 
 
 ## Install gitman submodules
-## for exemp0lo, px4
+## PX4, Mavlink
 gitman install --force
