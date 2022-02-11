@@ -15,6 +15,8 @@ if [ "$num" -lt "1" ]; then
   
 fi
 
+# Possível ordem: ROS2, QGroundControl, microRTPS, gitman, px4, ros2_ws, others
+
 sudo apt update
 
 ## | ----------------------- install git ---------------------- |

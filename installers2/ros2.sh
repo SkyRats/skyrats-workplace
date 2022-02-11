@@ -44,3 +44,5 @@ fi
 
 ## Install RQT
 sudo apt install ~nros-galactic-rqt*
+
+## TODO: tlvz precise instalar o Gazebo9 ou +
