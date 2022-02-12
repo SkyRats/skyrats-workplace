@@ -7,3 +7,5 @@
 .gitman.old
 .tmuxinator.yml
 *.AppImage
+sources2/FastDDS-2.0.2
+sources2/foonathan_memory/foonathan_memory_vendor
