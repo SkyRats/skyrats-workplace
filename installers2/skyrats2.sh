@@ -41,7 +41,7 @@ bash $MY_PATH/gitman2.sh
 
 ## | ------------------- install fastRTPS --------------------- |
 
-bash $MY_PATH/microRTPS.sh
+bash $MY_PATH/fastRTPS.sh
 
 ## | ---------------- install qgroundcontrol ---------------- |
 
