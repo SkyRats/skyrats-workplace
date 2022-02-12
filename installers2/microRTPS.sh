@@ -17,8 +17,9 @@ export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc
 
 ## Install dependencies
+sudo apt install -y python3-setuptools python3-pip
 sudo apt install -y python3-colcon-common-extensions
-sudo apt install -y ros-galatic-eigen3-cmake-module
+sudo apt install -y ros-galactic-eigen3-cmake-module
 sudo pip3 install -U empy pyros-genmsg setuptools 
 
 ## Install Java 11
