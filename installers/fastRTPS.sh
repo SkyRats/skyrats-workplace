@@ -6,8 +6,8 @@ MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd )`
 cd "$MY_PATH"
 
-## Go to sources2/ folder
-cd $MY_PATH/../sources2/
+## Run gitman.sh
+bash $MY_PATH/gitman.sh
 
 ## Install additional DDS implementations
 sudo apt install ros-galactic-rmw-fastrtps-cpp -y
@@ -22,24 +22,21 @@ sudo apt install -y python3-colcon-common-extensions
 sudo apt install -y ros-galactic-eigen3-cmake-module
 sudo pip3 install -U empy pyros-genmsg setuptools testresources
 
-## Install Java 11
+## Install Java 13
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y --quiet --no-install-recommends install \
     ant \
-    openjdk-11-jre \
-    openjdk-11-jdk \
+    openjdk-13-jre \
+    openjdk-13-jdk \
     ;
 
-## Set Java 11 as default
-sudo update-alternatives --set java $(update-alternatives --list java | grep "java-11")
+## Set Java 13 as default
+sudo update-alternatives --set java $(update-alternatives --list java | grep "java-13")
 
 ## Install sdkman! to Grandle
-cd $MY_PATH/../sources2/
+cd $MY_PATH/../src/
 mkdir sdkman_installer
 cd sdkman_installer
 curl -s "https://get.sdkman.io" | bash
-
-#source "/home/rifi/.sdkman/bin/sdkman-init.sh"
-#echo 'source "/home/rifi/.sdkman/bin/sdkman-init.sh"' >> ~/.bashrc
 
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 echo 'source "$HOME/.sdkman/bin/sdkman-init.sh"' >> ~/.bashrc
@@ -50,11 +47,7 @@ echo
 sdk install gradle 6.3
 
 # Install Foonathan memory
-cd $MY_PATH/../sources2/
-mkdir foonathan_memory
-cd foonathan_memory
-git clone https://github.com/eProsima/foonathan_memory_vendor.git
-cd foonathan_memory_vendor
+cd $MY_PATH/../src/foonathan_memory
 mkdir build 
 cd build
 cmake ..
@@ -62,20 +55,18 @@ sudo cmake --build . --target install
 
 echo "$0: installing fastRTPS"
 
-## Install Fast-DDS from source
-cd $MY_PATH/../sources2/
-git clone --recursive https://github.com/eProsima/Fast-DDS.git -b v2.0.2 ./FastDDS-2.0.2
-cd ./FastDDS-2.0.2
-mkdir build 
-cd build
-cmake -DTHIRDPARTY=ON -DSECURITY=ON ..
-make -j $(nproc --all)
-sudo make install
+# ## Install Fast-DDS from source
+# cd $MY_PATH/../src/
+# git clone --recursive https://github.com/eProsima/Fast-DDS.git -b v2.0.2 ./FastDDS-2.0.2
+# cd ./FastDDS-2.0.2
+# mkdir build 
+# cd build
+# cmake -DTHIRDPARTY=ON -DSECURITY=ON ..
+# make -j $(nproc --all)
+# sudo make install
 
 ## Install Fast-RTPS-gen from source
-cd $MY_PATH/../sources2/
-git clone --recursive https://github.com/eProsima/Fast-DDS-Gen.git -b v1.0.4 ./Fast-RTPS-Gen
-cd ./Fast-RTPS-Gen
+cd $MY_PATH/../src/Fast-RTPS-Gen
 gradle assemble
 sudo env "PATH=$PATH" gradle install
 

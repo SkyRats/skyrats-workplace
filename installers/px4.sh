@@ -6,14 +6,17 @@ MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd )`
 cd "$MY_PATH"
 
+## Run gitman.sh
+bash $MY_PATH/gitman.sh
+
 ## Change user and/or group ownership
 if [ -e /home/$USER/.local/lib ]; then
   sudo chown $USER /home/$USER/.local/lib -R
 fi
 
 ## Run Ubuntu.sh from px4
-# (px4 was cloned by gitman into ros_packages)
-sudo bash $MY_PATH/../ros_packages/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tool
+# (px4 was cloned by gitman into src)
+sudo bash $MY_PATH/../src/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tool
 
 ## Fix mrs_gazebo_common_resources build on Ubuntu 20.04
 sudo apt-get upgrade -y libignition-common3*

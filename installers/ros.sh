@@ -1,28 +1,46 @@
-#!/bin/bash
+#! /usr/bin/env bash
+echo "$0: installing ROS 2"
 
-echo "$0: Installing ROS"
-
-sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
-wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
-sudo apt-get -y update
-
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-
-sudo apt-get -y install curl
-curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-
-sudo apt-get -y update
-
-sudo apt-get -y install ros-noetic-desktop-full
-
-num=`cat ~/.bashrc | grep "/opt/ros/noetic/setup.bash" | wc -l`
-if [ "$num" -lt "1" ]; then
-
-  # set bashrc
-  echo "
-source /opt/ros/noetic/setup.bash" >> ~/.bashrc
-
+## Check for UTF-8 
+LOCALE=`locale`
+SUBLOCALE=${LOCALE:11:5}
+if [ $SUBLOCALE != "UTF-8"  ]; then
+    echo "$0: locale did not return UTF-8. Try, f.e.:
+    sudo apt update && sudo apt install locales
+    sudo locale-gen en_US en_US.UTF-8
+    sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    "
+    exit 0
 fi
 
-cd
-source /opt/ros/noetic/setup.bash
+## Add universe repository
+sudo apt install -y software-properties-common
+sudo add-apt-repository universe
+
+## Add ROS repository
+sudo apt update
+sudo apt install -y curl gnupg lsb-release
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+## Install ROS
+sudo apt update
+sudo apt install -y ros-galactic-desktop
+
+## Sourcing the setup script
+source /opt/ros/galactic/setup.bash
+
+## Add ROS' setup.bash in bash.rc 
+COMMAND="source /opt/ros/galactic/setup.bash"
+num=`cat ~/.bashrc | grep "$COMMAND" | wc -l`
+if [ "$num" -lt "1" ]; then
+
+  echo "Adding '$COMMAND' to your .bashrc"
+
+  # Set bashrc
+  echo "$COMMAND" >> ~/.bashrc
+fi
+
+## Install RQT
+sudo apt install -y ~nros-galactic-rqt*
