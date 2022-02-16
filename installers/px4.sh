@@ -6,8 +6,25 @@ MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd )`
 cd "$MY_PATH"
 
+## Initialize variables
+INSTALL_GITMAN="true"
+
+## Parse arguments
+for arg in "$@"
+do
+	if [[ $arg == "--no-gitman.sh" ]]; then
+		INSTALL_GITMAN="false"
+	fi
+done
+
 ## Run gitman.sh
-bash $MY_PATH/gitman.sh
+if [ $INSTALL_GITMAN == "true"]; then
+    bash $MY_PATH/gitman.sh
+fi
+
+## Clone Px4 into src
+echo "OBS: Now, wait some minutes please... ;)"
+gitman install --force px4_firmware
 
 ## Change user and/or group ownership
 if [ -e /home/$USER/.local/lib ]; then
@@ -15,7 +32,6 @@ if [ -e /home/$USER/.local/lib ]; then
 fi
 
 ## Run Ubuntu.sh from px4
-# (px4 was cloned by gitman into src)
 sudo bash $MY_PATH/../src/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tool
 
 ## Fix mrs_gazebo_common_resources build on Ubuntu 20.04

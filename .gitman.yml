@@ -1,49 +1,24 @@
-location: .gitman
+location: src/
 sources:
   - repo: https://github.com/PX4/PX4-Autopilot.git
     name: px4_firmware
     rev: v1.12.3
     type: git
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: src/px4_firmware
     scripts:
       - git submodule update --init --recursive 
   - repo: https://github.com/mavlink/mavlink-gbp-release
     name: mavlink-gbp-release
     rev: 0dc40a07d97e665c563600081840c45b60bae1cf
     type: git
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: src/mavlink
-    scripts:
-      - git submodule update --init --recursive
   - repo: https://github.com/eProsima/foonathan_memory_vendor.git
     name: foonathan_memory_vendor
     rev: master
     type: git
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: src/foonathan_memory
-    scripts:
-      - git submodule update --init --recursive
   - repo: https://github.com/eProsima/Fast-DDS-Gen.git
-    name: Fast-DDS-Gen
-    rev: 1.0.4
+    name: fast-DDS-Gen
+    rev: v1.0.4
     type: git
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: src/Fast-RTPS-Gen
-    scripts:
-      - git submodule update --init --recursive
+
 default_group: ''
 groups:
   -

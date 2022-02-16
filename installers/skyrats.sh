@@ -15,7 +15,7 @@ if [ "$num" -lt "1" ]; then
   
 fi
 
-# Possível ordem: ROS, fastRTPS, px4, ros2_ws, others, QGroundControl
+# Possível ordem: ROS, gitman, fastRTPS, px4, ros2_ws, others, QGroundControl
 
 sudo apt update
 
@@ -27,6 +27,10 @@ sudo apt-get -y install git
 
 bash $MY_PATH/ros2.sh
 
+## | --------------------- install gitman --------------------- |
+
+bash $MY_PATH/gitman2.sh 
+
 ## | ----------------------- create skyrats_ws ---------------------- |
 
 bash $MY_PATH/ros2_ws.sh
@@ -35,12 +39,9 @@ bash $MY_PATH/ros2_ws.sh
 
 bash $MY_PATH/others.sh
 
-## | --------------------- install gitman --------------------- |
-#bash $MY_PATH/gitman2.sh (is called by px4.sh and fastRTPS.sh)
-
 ## | ------------------- install fastRTPS --------------------- |
 
-bash $MY_PATH/fastRTPS.sh
+bash $MY_PATH/fastRTPS.sh --no-gitman.sh
 
 ## | ---------------- install qgroundcontrol ---------------- |
 
@@ -48,7 +49,7 @@ bash $MY_PATH/qgroundcontrol.sh
 
 ## | ---------------- install px4 dependencies ---------------- |
 
-bash $MY_PATH/px4.sh
+bash $MY_PATH/px4.sh --no-gitman.sh
 
 
 

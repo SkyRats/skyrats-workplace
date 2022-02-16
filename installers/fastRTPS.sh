@@ -1,13 +1,26 @@
 #! /usr/bin/env bash
 echo "$0: installing fastRTPS dependencies"
 
+## Initialize variables
+INSTALL_GITMAN="true"
+
 ## Get and go to this file's path
 MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd )`
 cd "$MY_PATH"
 
+## Parse arguments
+for arg in "$@"
+do
+	if [[ $arg == "--no-gitman.sh" ]]; then
+		INSTALL_GITMAN="false"
+	fi
+done
+
 ## Run gitman.sh
-bash $MY_PATH/gitman.sh
+if [ $INSTALL_GITMAN == "true"]; then
+    bash $MY_PATH/gitman.sh
+fi
 
 ## Install additional DDS implementations
 sudo apt install ros-galactic-rmw-fastrtps-cpp -y
@@ -47,13 +60,12 @@ echo
 sdk install gradle 6.3
 
 # Install Foonathan memory
-cd $MY_PATH/../src/foonathan_memory
+gitman install --force foonathan_memory_vendor
+cd $MY_PATH/../src/foonathan_memory_vendor
 mkdir build 
 cd build
 cmake ..
 sudo cmake --build . --target install
-
-echo "$0: installing fastRTPS"
 
 # ## Install Fast-DDS from source
 # cd $MY_PATH/../src/
@@ -66,13 +78,14 @@ echo "$0: installing fastRTPS"
 # sudo make install
 
 ## Install Fast-RTPS-gen from source
-cd $MY_PATH/../src/Fast-RTPS-Gen
+gitman install --force fast-DDS-Gen
+cd $MY_PATH/../src/fast-DDS-Gen
 gradle assemble
 sudo env "PATH=$PATH" gradle install
 
-#export LD_LIBRARY_PATH=/usr/local/lib/
-#echo 'export LD_LIBRARY_PATH=/usr/local/lib/' >> ~/.bashrc
-#(i don't remmember where this came from)
+# export LD_LIBRARY_PATH=/usr/local/lib/
+# echo 'export LD_LIBRARY_PATH=/usr/local/lib/' >> ~/.bashrc
+# (i don't remmember where this came from)
 # TODO: clear?
 
 ## Return to scripts folder
