@@ -18,7 +18,7 @@ do
 done
 
 ## Run gitman.sh
-if [ $INSTALL_GITMAN == "true"]; then
+if [ $INSTALL_GITMAN == "true" ]; then
     bash $MY_PATH/gitman.sh
 fi
 

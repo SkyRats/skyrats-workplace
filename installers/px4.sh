@@ -18,11 +18,12 @@ do
 done
 
 ## Run gitman.sh
-if [ $INSTALL_GITMAN == "true"]; then
+if [ $INSTALL_GITMAN == "true" ]; then
     bash $MY_PATH/gitman.sh
 fi
 
 ## Clone Px4 into src
+echo "$0: Cloning PX4..."
 echo "OBS: Now, wait some minutes please... ;)"
 gitman install --force px4_firmware
 
@@ -32,9 +33,11 @@ if [ -e /home/$USER/.local/lib ]; then
 fi
 
 ## Run Ubuntu.sh from px4
+echo "$0: Running ubuntu.sh"
 sudo bash $MY_PATH/../src/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tool
 
 ## Fix mrs_gazebo_common_resources build on Ubuntu 20.04
+echo "$0: Solving other dependencies"
 sudo apt-get upgrade -y libignition-common3*
 sudo -H pip3 install --user packaging
 sudo apt-get -y install python3-packaging
