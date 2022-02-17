@@ -5,7 +5,7 @@ MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd )`
 cd "$MY_PATH"
 
-## Add description in bash.rc
+## Add description in .bashrc
 LINE="## SKYRATS setups:"
 NUM=`cat ~/.bashrc | grep "$LINE" | wc -l`
 if [ "$num" -lt "1" ]; then
@@ -16,6 +16,7 @@ if [ "$num" -lt "1" ]; then
 fi
 
 # Possível ordem: ROS, gitman, fastRTPS, px4, ros2_ws, others, QGroundControl
+# Fiz um pouquinho diferente
 
 sudo apt update
 
@@ -31,25 +32,24 @@ bash $MY_PATH/ros2.sh
 
 bash $MY_PATH/gitman2.sh 
 
-## | ----------------------- create skyrats_ws ---------------------- |
-
-bash $MY_PATH/ros2_ws.sh
-
-## | -------------- install others dependencies -------------- |
-
-bash $MY_PATH/others.sh
-
 ## | ------------------- install fastRTPS --------------------- |
 
 bash $MY_PATH/fastRTPS.sh --no-gitman.sh
 
-## | ---------------- install qgroundcontrol ---------------- |
+## | ----------------------- create skyrats_ws ---------------------- |
 
-bash $MY_PATH/qgroundcontrol.sh
+bash $MY_PATH/ros2_ws.sh
 
 ## | ---------------- install px4 dependencies ---------------- |
 
 bash $MY_PATH/px4.sh --no-gitman.sh
 
+## | ---------------- install qgroundcontrol ---------------- |
+
+bash $MY_PATH/qgroundcontrol.sh
+
+## | -------------- install others dependencies -------------- |
+
+bash $MY_PATH/others.sh
 
 

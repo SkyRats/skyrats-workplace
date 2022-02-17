@@ -38,12 +38,13 @@ sudo bash $MY_PATH/../src/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx --no-sim
 
 ## Fix mrs_gazebo_common_resources build on Ubuntu 20.04
 echo "$0: Solving other dependencies"
-sudo apt-get upgrade -y libignition-common3*
+sudo apt -y install python3-setuptools python3-pip
+sudo apt -y upgrade libignition-common3*
 sudo -H pip3 install --user packaging
-sudo apt-get -y install python3-packaging
-sudo apt-get -y install python3-toml
+sudo apt -y install python3-packaging
+sudo apt -y install python3-toml
 sudo -H pip3 install --user toml
-sudo apt-get -y install 'libgstreamer1.0-dev'
+sudo apt -y install 'libgstreamer1.0-dev'
 
 ## Add gazebo's setup.bash in bash.rc 
 COMMAND1="source /usr/share/gazebo/setup.sh"

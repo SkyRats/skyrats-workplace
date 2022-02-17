@@ -5,7 +5,7 @@ MY_PATH=`( cd "$MY_PATH" && pwd )`
 cd "$MY_PATH"
 
 ## Mavlink dependencies
-sudo apt install python3-pip
+sudo apt install -y python3-setuptools python3-pip
 pip3 install --user future
 sudo apt -y install python3-future python3-lxml 
 sudo apt -y install python3-jinja2 python3-markupsafe
