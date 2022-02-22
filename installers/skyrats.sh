@@ -8,7 +8,7 @@ cd "$MY_PATH"
 ## Add description in .bashrc
 LINE="## SKYRATS setups:"
 NUM=`cat ~/.bashrc | grep "$LINE" | wc -l`
-if [ "$num" -lt "1" ]; then
+if [ "$NUM" -lt "1" ]; then
 
   echo "Adding '$LINE' to your .bashrc"
   echo "$LINE" >> ~/.bashrc
@@ -26,30 +26,37 @@ sudo apt-get -y install git
 
 ## | ----------------------- install ROS2 ---------------------- |
 
-bash $MY_PATH/ros2.sh
+echo -e "\n\n ... \n\n"
+bash $MY_PATH/ros.sh
 
 ## | --------------------- install gitman --------------------- |
 
-bash $MY_PATH/gitman2.sh 
+echo -e "\n\n ... \n\n"
+bash $MY_PATH/gitman.sh 
 
 ## | ------------------- install fastRTPS --------------------- |
 
+echo -e "\n\n ... \n\n"
 bash $MY_PATH/fastRTPS.sh --no-gitman.sh
 
 ## | ----------------------- create skyrats_ws ---------------------- |
 
-bash $MY_PATH/ros2_ws.sh
+echo -e "\n\n ... \n\n"
+bash $MY_PATH/ros_ws.sh
 
 ## | ---------------- install px4 dependencies ---------------- |
 
+echo -e "\n\n ... \n\n"
 bash $MY_PATH/px4.sh --no-gitman.sh
 
 ## | ---------------- install qgroundcontrol ---------------- |
 
+echo -e "\n\n ... \n\n"
 bash $MY_PATH/qgroundcontrol.sh
 
 ## | -------------- install others dependencies -------------- |
 
+echo -e "\n\n ... \n\n"
 bash $MY_PATH/others.sh
 
 
