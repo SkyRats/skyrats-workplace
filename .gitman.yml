@@ -2,10 +2,10 @@ location: src/
 sources:
   - repo: https://github.com/PX4/PX4-Autopilot.git
     name: px4_firmware
-    rev: v1.12.3
+    rev: v1.11.2
     type: git
     scripts:
-      - git submodule update --init --recursive 
+      - git submodule update --init --recursive --force
   - repo: https://github.com/mavlink/mavlink-gbp-release
     name: mavlink-gbp-release
     rev: 0dc40a07d97e665c563600081840c45b60bae1cf

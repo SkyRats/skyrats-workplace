@@ -32,6 +32,9 @@ if [ -e /home/$USER/.local/lib ]; then
   sudo chown $USER /home/$USER/.local/lib -R
 fi
 
+## Fix numpy version problems
+sudo pip3 install numpy --upgrade
+
 ## Run Ubuntu.sh from px4
 echo "$0: Running ubuntu.sh"
 sudo bash $MY_PATH/../src/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx
