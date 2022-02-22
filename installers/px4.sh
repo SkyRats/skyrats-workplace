@@ -34,7 +34,7 @@ fi
 
 ## Run Ubuntu.sh from px4
 echo "$0: Running ubuntu.sh"
-sudo bash $MY_PATH/../src/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tool
+sudo bash $MY_PATH/../src/px4_firmware/Tools/setup/ubuntu.sh --no-nuttx
 
 ## Fix mrs_gazebo_common_resources build on Ubuntu 20.04
 echo "$0: Solving other dependencies"
