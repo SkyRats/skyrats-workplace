@@ -48,6 +48,9 @@ sudo bash $MY_PATH/../src/PX4-Autopilot/Tools/setup/ubuntu.sh
 #sudo apt -y install python3-toml
 #sudo -H pip3 install --user toml
 #sudo apt -y install 'libgstreamer1.0-dev'
+sudo apt-get install python3-genmsg
+pip3 install --user toml
+pip3 install --user jinja2
 pip3 install kconfiglib
 pip3 install --user jsonschema
 
