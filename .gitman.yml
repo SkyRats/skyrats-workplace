@@ -1,7 +1,7 @@
 location: src/
 sources:
   - repo: https://github.com/PX4/PX4-Autopilot.git
-    name: px4_firmware
+    name: PX4-Autopilot
     rev: v1.11.2
     type: git
     scripts:
@@ -15,7 +15,7 @@ sources:
     rev: master
     type: git
   - repo: https://github.com/eProsima/Fast-DDS-Gen.git
-    name: fast-DDS-Gen
+    name: Fast-DDS-Gen
     rev: v1.0.4
     type: git
 
