@@ -29,14 +29,14 @@ sudo apt install -y ros-galactic-eigen3-cmake-module
 sudo pip3 install -U empy pyros-genmsg setuptools testresources
 
 ## Install Java 13
-#sudo DEBIAN_FRONTEND=noninteractive apt-get -y --quiet --no-install-recommends install \
-#    ant \
-#    openjdk-13-jre \
-#    openjdk-13-jdk \
-#    ;
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y --quiet --no-install-recommends install \
+    ant \
+    openjdk-13-jre \
+    openjdk-13-jdk \
+    ;
 
 ## Set Java 13 as default
-#sudo update-alternatives --set java $(update-alternatives --list java | grep "java-13")
+sudo update-alternatives --set java $(update-alternatives --list java | grep "java-13")
 
 ## Install sdkman! to Grandle
 cd $MY_PATH/../src/
