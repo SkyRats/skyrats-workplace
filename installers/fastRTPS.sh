@@ -22,13 +22,6 @@ if [ $INSTALL_GITMAN == "true" ]; then
     bash $MY_PATH/gitman.sh
 fi
 
-## Install additional DDS implementations
-sudo apt install ros-galactic-rmw-fastrtps-cpp -y
-
-## Switch to rmw_fastrtps
-export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc
-
 ## Install dependencies
 sudo apt install -y python3-setuptools python3-pip
 sudo apt install -y python3-colcon-common-extensions
@@ -36,14 +29,14 @@ sudo apt install -y ros-galactic-eigen3-cmake-module
 sudo pip3 install -U empy pyros-genmsg setuptools testresources
 
 ## Install Java 13
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y --quiet --no-install-recommends install \
-    ant \
-    openjdk-13-jre \
-    openjdk-13-jdk \
-    ;
+#sudo DEBIAN_FRONTEND=noninteractive apt-get -y --quiet --no-install-recommends install \
+#    ant \
+#    openjdk-13-jre \
+#    openjdk-13-jdk \
+#    ;
 
 ## Set Java 13 as default
-sudo update-alternatives --set java $(update-alternatives --list java | grep "java-13")
+#sudo update-alternatives --set java $(update-alternatives --list java | grep "java-13")
 
 ## Install sdkman! to Grandle
 cd $MY_PATH/../src/
@@ -78,8 +71,8 @@ sudo cmake --build . --target install
 # sudo make install
 
 ## Install Fast-RTPS-gen from source
-gitman install --force fast-DDS-Gen
-cd $MY_PATH/../src/fast-DDS-Gen
+gitman install --force Fast-DDS-Gen
+cd $MY_PATH/../src/Fast-DDS-Gen
 gradle assemble
 sudo env "PATH=$PATH" gradle install
 

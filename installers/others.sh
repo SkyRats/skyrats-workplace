@@ -18,8 +18,8 @@ echo "$0: installing general dependencies"
 #  #python3-lxml\ (mavlink)
 
 ## TODO:Perguntar para a gabs:
-sudo apt install ros-galactic-eigen3-cmake-module
-sudo pip3 install -U empy pyros-genmsg setuptools
+#sudo apt install ros-galactic-eigen3-cmake-module
+#sudo pip3 install -U empy pyros-genmsg setuptools
 
 ## TODO: Open-cv?
 sudo apt-get -y install libopencv-dev
