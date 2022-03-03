@@ -1,8 +1,8 @@
 location: src/
 sources:
-  - repo: https://github.com/PX4/PX4-Autopilot.git
+  - repo: https://github.com/SkyRats/PX4-Autopilot
     name: px4_firmware
-    rev: v1.12.3
+    rev: v1.12.3_sky
     type: git
     scripts:
       - git submodule update --init --recursive 
