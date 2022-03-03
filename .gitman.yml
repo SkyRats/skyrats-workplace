@@ -1,11 +1,11 @@
 location: src/
 sources:
-  - repo: https://github.com/SkyRats/PX4-Autopilot
-    name: px4_firmware
-    rev: v1.12.3_sky
+  - repo: https://github.com/PX4/PX4-Autopilot.git
+    name: PX4-Autopilot
+    rev: v1.11.2
     type: git
     scripts:
-      - git submodule update --init --recursive 
+      - git submodule update --init --recursive --force
   - repo: https://github.com/mavlink/mavlink-gbp-release
     name: mavlink-gbp-release
     rev: 0dc40a07d97e665c563600081840c45b60bae1cf
@@ -15,7 +15,7 @@ sources:
     rev: master
     type: git
   - repo: https://github.com/eProsima/Fast-DDS-Gen.git
-    name: fast-DDS-Gen
+    name: Fast-DDS-Gen
     rev: v1.0.4
     type: git
 

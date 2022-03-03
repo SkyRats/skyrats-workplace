@@ -17,10 +17,9 @@ sudo apt -y install ros-galactic-mavlink ros-galactic-libmavconn
 sudo usermod -a -G dialout $USER
 sudo apt remove modemmanager -y
 sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
+sudo apt install libqt5gui5 -y
 
 ## Get QGroundControl
 cd $MY_PATH/..
 wget https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage
 chmod +x ./QGroundControl.AppImage
-
-## TODO: onde vamos instalar? -skyrats_workplace

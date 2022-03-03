@@ -23,7 +23,7 @@ if [ $INSTALL_GITMAN == "true" ]; then
 fi
 
 ## Install additional DDS implementations
-sudo apt install ros-galactic-rmw-fastrtps-cpp -y
+sudo apt install -y ros-galactic-rmw-fastrtps-cpp
 
 ## Switch to rmw_fastrtps
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
@@ -67,26 +67,11 @@ cd build
 cmake ..
 sudo cmake --build . --target install
 
-# ## Install Fast-DDS from source
-# cd $MY_PATH/../src/
-# git clone --recursive https://github.com/eProsima/Fast-DDS.git -b v2.0.2 ./FastDDS-2.0.2
-# cd ./FastDDS-2.0.2
-# mkdir build 
-# cd build
-# cmake -DTHIRDPARTY=ON -DSECURITY=ON ..
-# make -j $(nproc --all)
-# sudo make install
-
-## Install Fast-RTPS-gen from source
-gitman install --force fast-DDS-Gen
-cd $MY_PATH/../src/fast-DDS-Gen
+## Install Fast-RTPS-gen from source - verify gradle and java
+gitman install --force Fast-DDS-Gen
+cd $MY_PATH/../src/Fast-DDS-Gen
 gradle assemble
 sudo env "PATH=$PATH" gradle install
-
-# export LD_LIBRARY_PATH=/usr/local/lib/
-# echo 'export LD_LIBRARY_PATH=/usr/local/lib/' >> ~/.bashrc
-# (i don't remmember where this came from)
-# TODO: clear?
 
 ## Return to scripts folder
 cd $MY_PATH
