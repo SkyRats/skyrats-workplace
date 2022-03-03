@@ -15,9 +15,6 @@ if [ "$NUM" -lt "1" ]; then
   
 fi
 
-# Possível ordem: ROS, gitman, fastRTPS, px4, ros2_ws, others, QGroundControl
-# Fiz um pouquinho diferente
-
 sudo apt update
 
 ## | ----------------------- install ROS2 ---------------------- |
@@ -42,8 +39,8 @@ bash $MY_PATH/fastRTPS.sh --no-gitman.sh
 
 ## | ----------------------- create skyrats_ws ---------------------- |
 
-#echo -e "\n\n ... (5) \n\n"
-#bash $MY_PATH/ros_ws.sh
+echo -e "\n\n ... (5) \n\n"
+bash $MY_PATH/ros_ws.sh
 
 ## | ---------------- install qgroundcontrol ---------------- |
 
