@@ -5,13 +5,13 @@ MY_PATH=`( cd "$MY_PATH" && pwd )`
 cd "$MY_PATH"
 
 ## Mavlink dependencies
-#sudo apt install -y python3-setuptools python3-pip
-#pip3 install --user future
-#sudo apt -y install python3-future python3-lxml 
-#sudo apt -y install python3-jinja2 python3-markupsafe
+sudo apt install -y python3-setuptools python3-pip
+pip3 install --user future
+sudo apt -y install python3-future python3-lxml 
+sudo apt -y install python3-jinja2 python3-markupsafe
 
 ## Install Mavlink
-#sudo apt -y install ros-galactic-mavlink ros-galactic-libmavconn 
+sudo apt -y install ros-galactic-mavlink ros-galactic-libmavconn 
 
 ## Others Qground dependencies
 sudo usermod -a -G dialout $USER
@@ -23,5 +23,3 @@ sudo apt install libqt5gui5 -y
 cd $MY_PATH/..
 wget https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage
 chmod +x ./QGroundControl.AppImage
-
-## TODO: onde vamos instalar? -skyrats_workplace
