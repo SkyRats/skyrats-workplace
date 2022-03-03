@@ -1,8 +1,6 @@
 #! /usr/bin/env bash
 echo "$0: installing ROS 2"
 
-cd ~
-
 ## Check for UTF-8 
 LOCALE=`locale`
 SUBLOCALE=${LOCALE:11:5}
@@ -44,12 +42,5 @@ if [ "$num" -lt "1" ]; then
   echo "$COMMAND" >> ~/.bashrc
 fi
 
-## Install additional DDS implementations
-sudo apt install -y ros-galactic-rmw-fastrtps-cpp
-
-## Switch to rmw_fastrtps
-export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc
-
-## Install RQT - ?
-#sudo apt install -y ~nros-galactic-rqt*
+## Install RQT
+sudo apt install -y ~nros-galactic-rqt*
