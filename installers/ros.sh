@@ -1,6 +1,9 @@
 #! /usr/bin/env bash
 echo "$0: installing ROS 2"
 
+## Import scripts common tools
+source ./libtools.sh
+
 ## Check for UTF-8 
 LOCALE=`locale`
 SUBLOCALE=${LOCALE:11:5}
@@ -32,15 +35,7 @@ sudo apt install -y ros-galactic-desktop
 source /opt/ros/galactic/setup.bash
 
 ## Add ROS' setup.bash in bash.rc 
-COMMAND="source /opt/ros/galactic/setup.bash"
-num=`cat ~/.bashrc | grep "$COMMAND" | wc -l`
-if [ "$num" -lt "1" ]; then
-
-  echo "Adding '$COMMAND' to your .bashrc"
-
-  # Set bashrc
-  echo "$COMMAND" >> ~/.bashrc
-fi
+addToBashrc "source /opt/ros/galactic/setup.bash"
 
 ## Install RQT
 sudo apt install -y ~nros-galactic-rqt*

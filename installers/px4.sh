@@ -1,10 +1,11 @@
 #!/bin/bash
 echo "$0: installing Px4 dependencies"
 
-## Get and go to this file's path
-MY_PATH=`dirname "$0"`
-MY_PATH=`( cd "$MY_PATH" && pwd )`
-cd "$MY_PATH"
+## Import scripts common tools
+source ./libtools.sh
+
+## Go to this file's path
+MY_PATH=`whereAmI`
 
 ## Initialize variables
 INSTALL_GITMAN="true"
@@ -37,7 +38,7 @@ sudo pip3 install numpy --upgrade
 
 ## Run Ubuntu.sh from px4
 echo "$0: Running ubuntu.sh"
-sudo bash $MY_PATH/../src/PX4-Autopilot/Tools/setup/ubuntu.sh
+sudo bash "$MY_PATH/../src/PX4-Autopilot/Tools/setup/ubuntu.sh"
 
 ## Fix mrs_gazebo_common_resources build on Ubuntu 20.04
 echo "$0: Solving other dependencies"

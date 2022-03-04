@@ -1,5 +1,8 @@
 #! /usr/bin/env bash
 
+## Import scripts common tools
+source ./libtools.sh
+
 ## Name of workspace: USE YOUR CREATIVITY 
 NAME=skyrats_ws
 
@@ -12,37 +15,9 @@ cd ~/${NAME}
 colcon build --symlink-install
 
 ## Add colcon_cd dependecies in .bashrc 
-COMMAND="source /usr/share/colcon_cd/function/colcon_cd.sh"
-num=`cat ~/.bashrc | grep "$COMMAND" | wc -l`
-if [ "$num" -lt "1" ]; then
-
-  echo "Adding '$COMMAND' to your .bashrc"
-  echo "$COMMAND" >> ~/.bashrc
-
-fi
-COMMAND="export _colcon_cd_root=/opt/ros/galactic/"
-num=`cat ~/.bashrc | grep "$COMMAND" | wc -l`
-if [ "$num" -lt "1" ]; then
-
-  echo "Adding '$COMMAND' to your .bashrc"
-  echo "$COMMAND" >> ~/.bashrc
-
-fi
-COMMAND="source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash"
-num=`cat ~/.bashrc | grep "$COMMAND" | wc -l`
-if [ "$num" -lt "1" ]; then
-
-  echo "Adding '$COMMAND' to your .bashrc"
-  echo "$COMMAND" >> ~/.bashrc
-
-fi
+addToBashrc "source /usr/share/colcon_cd/function/colcon_cd.sh"
+addToBashrc "export _colcon_cd_root=/opt/ros/galactic/"
+addToBashrc "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash"
 
 ## Add workspace's setup.bash in .bashrc 
-COMMAND2="source ~/$NAME/install/setup.bash"
-num=`cat ~/.bashrc | grep "$COMMAND2" | wc -l`
-if [ "$num" -lt "1" ]; then
-
-  echo "Adding '$COMMAND2' to your .bashrc"
-  echo "$COMMAND2" >> ~/.bashrc
-  
-fi
+addToBashrc "source ~/$NAME/install/setup.bash"

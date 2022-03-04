@@ -1,9 +1,10 @@
 #!/bin/bash
 
-## Get and go to this file's path
-MY_PATH=`dirname "$0"`
-MY_PATH=`( cd "$MY_PATH" && pwd )`
-cd "$MY_PATH"
+## Import scripts common tools
+source ./libtools.sh
+
+## Go to this file's path
+MY_PATH=`whereAmI`
 
 ## Install gitman and its dependencies
 echo "$0: installing Gitman and its dependencies"
@@ -12,6 +13,6 @@ sudo pip3 install gitman
 sudo -H pip3 install gitman
 
 ## Prepare folder for installations
-cd $MY_PATH/..
+cd "$MY_PATH/.."
 mkdir src
 echo "src/" >> .gitignore

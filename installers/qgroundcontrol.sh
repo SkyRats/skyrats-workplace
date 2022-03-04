@@ -1,8 +1,10 @@
 #!/bin/bash
 
-MY_PATH=`dirname "$0"`
-MY_PATH=`( cd "$MY_PATH" && pwd )`
-cd "$MY_PATH"
+## Import scripts common tools
+source ./libtools.sh
+
+## Go to this file's path
+MY_PATH=`whereAmI`
 
 ## Mavlink dependencies
 sudo apt install -y python3-setuptools python3-pip
@@ -20,6 +22,6 @@ sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
 sudo apt install libqt5gui5 -y
 
 ## Get QGroundControl
-cd $MY_PATH/..
+cd "$MY_PATH/.."
 wget https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage
 chmod +x ./QGroundControl.AppImage
