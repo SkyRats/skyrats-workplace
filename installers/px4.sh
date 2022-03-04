@@ -5,7 +5,7 @@ echo "$0: installing Px4 dependencies"
 source ./libtools.sh
 
 ## Go to this file's path
-MY_PATH=`whereAmI`
+MY_PATH=`whereAmIFrom`
 
 ## Initialize variables
 INSTALL_GITMAN="true"
@@ -20,7 +20,7 @@ done
 
 ## Run gitman.sh
 if [ $INSTALL_GITMAN == "true" ]; then
-    bash $MY_PATH/gitman.sh
+    bash "$MY_PATH/gitman.sh"
 fi
 
 ## Clone Px4 into src

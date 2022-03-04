@@ -7,8 +7,6 @@ whereAmIFrom () {
     echo $MY_PATH1
 }
 
-echo `whereAmIFrom`
-
 addToBashrc () {
     LINE=$1
     NUM=`cat ~/.bashrc | grep "$LINE" | wc -l`

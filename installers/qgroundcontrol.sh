@@ -4,7 +4,7 @@
 source ./libtools.sh
 
 ## Go to this file's path
-MY_PATH=`whereAmI`
+MY_PATH=`whereAmIFrom`
 
 ## Mavlink dependencies
 sudo apt install -y python3-setuptools python3-pip

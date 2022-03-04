@@ -4,7 +4,7 @@
 source ./libtools.sh
 
 ## Go to this file's path
-MY_PATH=`whereAmI`
+MY_PATH=`whereAmIFrom`
 
 ## Install gitman and its dependencies
 echo "$0: installing Gitman and its dependencies"

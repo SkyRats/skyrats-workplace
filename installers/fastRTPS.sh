@@ -8,7 +8,7 @@ source ./libtools.sh
 INSTALL_GITMAN="true"
 
 ## Get and go to this file's path
-MY_PATH=`whereAmI`
+MY_PATH=`whereAmIFrom`
 
 ## Parse arguments
 for arg in "$@"
