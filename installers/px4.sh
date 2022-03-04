@@ -42,7 +42,7 @@ sudo bash $MY_PATH/../src/PX4-Autopilot/Tools/setup/ubuntu.sh
 ## Fix mrs_gazebo_common_resources build on Ubuntu 20.04
 echo "$0: Solving other dependencies"
 sudo apt -y install python3-setuptools python3-pip
-sudo apt -y upgrade libignition-common3*
+sudo apt -y install libignition-common3*
 sudo -H pip3 install --user packaging
 sudo apt -y install python3-packaging
 sudo apt -y install python3-toml
