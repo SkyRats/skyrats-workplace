@@ -7,12 +7,6 @@
 .gitman.old
 .tmuxinator.yml
 *.AppImage
+*.AppImage.*
 src/
-src/
-src/
-src/
-src/
-src/
-src/
-src/
-src/
+
