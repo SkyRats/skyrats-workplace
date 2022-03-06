@@ -1,5 +1,6 @@
-# Useful tools for scripts
+### Useful tools for skyrats scripts
 
+## Get script's path and go to it
 whereAmIFrom () {
     MY_PATH0=`dirname "$0"`
     MY_PATH1=`( cd "$MY_PATH0" && pwd )`
@@ -7,6 +8,7 @@ whereAmIFrom () {
     echo $MY_PATH1
 }
 
+## Add a line to .bashrc
 addToBashrc () {
     LINE=$1
     NUM=`cat ~/.bashrc | grep "$LINE" | wc -l`

@@ -2,7 +2,7 @@
 echo "$0: installing fastRTPS dependencies"
 
 ## Import scripts common tools
-source ./libtools.sh
+source ../lib/extra_tools.sh
 
 ## Initialize variables
 INSTALL_GITMAN="true"

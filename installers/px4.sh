@@ -2,7 +2,7 @@
 echo "$0: installing Px4 dependencies"
 
 ## Import scripts common tools
-source ./libtools.sh
+source ../lib/extra_tools.sh
 
 ## Go to this file's path
 MY_PATH=`whereAmIFrom`

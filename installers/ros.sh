@@ -2,7 +2,7 @@
 echo "$0: installing ROS 2"
 
 ## Import scripts common tools
-source ./libtools.sh
+source ../lib/extra_tools.sh
 
 ## Check for UTF-8 
 LOCALE=`locale`
