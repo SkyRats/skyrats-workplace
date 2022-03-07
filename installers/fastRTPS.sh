@@ -57,7 +57,7 @@ addToBashrc 'source "$HOME/.sdkman/bin/sdkman-init.sh"'
 cd ..
 
 ## Install Gradle (6.3 is the recommended version)
-echo
+sdk selfupdate
 sdk install gradle 6.3
 
 # Install Foonathan memory
