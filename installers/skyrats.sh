@@ -1,5 +1,12 @@
 #!/bin/bash
 
+## Check if it is at intallers/
+if [[ `dirname $0` != "." ]]; then
+    echo "Please, go into installers folder ;)"
+    echo "(Try something like 'cd installers/')"
+    exit 0
+fi
+
 ## Import scripts' common tools
 source ../lib/extra_tools.sh
 
