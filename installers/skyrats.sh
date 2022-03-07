@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Check if it is at intallers/
+## Check if it is into intallers/
 if [[ `dirname $0` != "." ]]; then
     echo "Please, go into installers folder ;)"
     echo "(Try something like 'cd installers/')"
