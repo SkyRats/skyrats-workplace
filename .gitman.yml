@@ -18,6 +18,14 @@ sources:
     name: Fast-DDS-Gen
     rev: v1.0.4
     type: git
+  - repo: https://github.com/PX4/px4_ros_com.git 
+    name: px4_ros_com
+    rev: master
+    type: git
+  - repo: https://github.com/PX4/px4_msgs.git 
+    name: px4_msgs
+    rev: master
+    type: git
 
 default_group: ''
 groups:
