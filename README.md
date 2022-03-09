@@ -29,8 +29,6 @@ Congrats! At this point you should have ROS galactic, Fast DDS, PX4 Firmware, QG
  > To make sure everything is set right, it is recommended that you reboot your sistem.
 
 ## Build ROS 2 Workspace
-This section shows how create a ROS 2 workspace. The `px4_ros_com` and `px4_msg` packages are cloned to a workspace folder:
-
 We created a workspace to have our environment all setup and it's time to build it:
 
 ```bash
