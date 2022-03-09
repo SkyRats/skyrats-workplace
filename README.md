@@ -41,7 +41,7 @@ cd ~/px4_ros_com_ros2/src/px4_ros_com/scripts
 
 bash build_ros2_workspace.bash
 ```
-This is the first way to check the installation succeeded. In case it doesn't work, look at the **issues section** to solve it.
+This is the first way to check if the installation succeeded. In case it doesn't work, look at the **issues section** to solve it.
 
 ## Simulation
 
