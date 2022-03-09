@@ -29,17 +29,26 @@ Congrats! At this point you should have ROS galactic, Fast DDS, PX4 Firmware and
  > To make sure everything is set right, it is recommended that you reboot your sistem.
 
 ## Build ROS 2 Workspace
-This section shows how create a ROS 2 workspace. The `px4_ros_com` and `px4_msg` packages are cloned to a workspace folder, and then a script is used to build the workspace:
+This section shows how create a ROS 2 workspace. The `px4_ros_com` and `px4_msg` packages are cloned to a workspace folder:
+
 ```bash
-mkdir -p ~/px4_ros_com_ros2/src
+git clone https://github.com/PX4/px4_ros_com.git ~/skyrats_ws/src/px4_ros_com
 
-git clone https://github.com/PX4/px4_ros_com.git ~/px4_ros_com_ros2/src/px4_ros_com
+git clone https://github.com/PX4/px4_msgs.git ~/skyrats_ws/src/px4_msgs
+```
+Then a script is used to build the workspace:
 
-git clone https://github.com/PX4/px4_msgs.git ~/px4_ros_com_ros2/src/px4_msgs
-
-cd ~/px4_ros_com_ros2/src/px4_ros_com/scripts
+```bash
+cd ~/skyrats_ws/src/px4_ros_com
 
 bash build_ros2_workspace.bash
+```
+
+If it doesn't work, try:
+```bash
+cd ~/skyrats_ws
+
+colcon build --symlink-install
 ```
 This is the first way to check if the installation succeeded. In case it doesn't work, look at the **issues section** to solve it.
 
