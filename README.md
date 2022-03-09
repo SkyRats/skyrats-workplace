@@ -24,19 +24,14 @@ bash skyrats.sh
 ```
 The `skyrats.sh` bash script will install everything you need to start your autonomous drone software development adventure, it should take a while though...
 
-Congrats! At this point you should have ROS galactic, Fast DDS, PX4 Firmware and QGroundControl sucessfully installed!
+Congrats! At this point you should have ROS galactic, Fast DDS, PX4 Firmware, QGroundControl and a new workspace sucessfully installed!
 
  > To make sure everything is set right, it is recommended that you reboot your sistem.
 
 ## Build ROS 2 Workspace
 This section shows how create a ROS 2 workspace. The `px4_ros_com` and `px4_msg` packages are cloned to a workspace folder:
 
-```bash
-git clone https://github.com/PX4/px4_ros_com.git ~/skyrats_ws/src/px4_ros_com
-
-git clone https://github.com/PX4/px4_msgs.git ~/skyrats_ws/src/px4_msgs
-```
-Then a script is used to build the workspace:
+We created a workspace to have our environment all setup and it's time to build it:
 
 ```bash
 cd ~/skyrats_ws/src/px4_ros_com
@@ -50,6 +45,13 @@ cd ~/skyrats_ws
 
 colcon build --symlink-install
 ```
+> In order to use the workspace, you need to `source` it. So, follow the next steps:
+```bash
+source ~/skyrats_ws/install/setup.bash
+
+echo "source ~/skyrats_ws/install/setup.bash" >> ~/.bashrc
+```
+
 This is the first way to check if the installation succeeded. In case it doesn't work, look at the **issues section** to solve it.
 
 ## Simulation
@@ -71,7 +73,7 @@ Now, we need to make this simulation work with ROS (so that we can send complex 
 On a new terminal, run:
 
 ```bash
-source ~/px4_ros_com_ros2/install/setup.bash
+source ~/skyrats_ws/install/setup.bash
 
 micrortps_agent -t UDP
 ```
@@ -79,11 +81,11 @@ micrortps_agent -t UDP
 Open a new terminal again and run the launch file:
 
 ```bash
-source ~/px4_ros_com_ros2/install/setup.bash
+source ~/skyrats_ws/install/setup.bash
 
 ros2 launch px4_ros_com sensor_combined_listener.launch.py
 ```
-> Don't forget to source your workspace everytime you use it.
+> Don't forget to source your workspace everytime you use it or write it on `.bashrc`
 
 If the bridge is working correctly you will be able to see the data being printed on the terminal/console where you launched the ROS listener:
 
@@ -115,13 +117,13 @@ make px4_sitl_rtps gazebo
 
 On a new terminal, run:
 ```bash
-source ~/px4_ros_com_ros2/install/setup.bash
+source ~/skyrats_ws/install/setup.bash
 
 micrortps_agent -t UDP
 ```
 And on a new terminal, run:
 ```bash
-source ~/px4_ros_com_ros2/install/setup.bash
+source ~/skyrats_ws/install/setup.bash
 
 ros2 run px4_ros_com offboard_control
 ```
