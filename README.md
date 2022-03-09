@@ -32,7 +32,7 @@ Congrats! At this point you should have ROS galactic, Fast DDS, PX4 Firmware, QG
 We created a workspace to have our environment all setup and it's time to build it:
 
 ```bash
-cd ~/skyrats_ws2/src/px4_ros_com
+cd ~/skyrats_ws2/src/px4_ros_com/scripts
 
 bash build_ros2_workspace.bash
 ```
