@@ -32,22 +32,22 @@ Congrats! At this point you should have ROS galactic, Fast DDS, PX4 Firmware, QG
 We created a workspace to have our environment all setup and it's time to build it:
 
 ```bash
-cd ~/skyrats_ws/src/px4_ros_com
+cd ~/skyrats_ws2/src/px4_ros_com
 
 bash build_ros2_workspace.bash
 ```
 
 If it doesn't work, try:
 ```bash
-cd ~/skyrats_ws
+cd ~/skyrats_ws2
 
 colcon build --symlink-install
 ```
 > In order to use the workspace, you need to `source` it. So, follow the next steps:
 ```bash
-source ~/skyrats_ws/install/setup.bash
+source ~/skyrats_ws2/install/setup.bash
 
-echo "source ~/skyrats_ws/install/setup.bash" >> ~/.bashrc
+echo "source ~/skyrats_ws2/install/setup.bash" >> ~/.bashrc
 ```
 
 This is the first way to check if the installation succeeded. In case it doesn't work, look at the **issues section** to solve it.
@@ -71,7 +71,7 @@ Now, we need to make this simulation work with ROS (so that we can send complex 
 On a new terminal, run:
 
 ```bash
-source ~/skyrats_ws/install/setup.bash
+source ~/skyrats_ws2/install/setup.bash
 
 micrortps_agent -t UDP
 ```
@@ -79,7 +79,7 @@ micrortps_agent -t UDP
 Open a new terminal again and run the launch file:
 
 ```bash
-source ~/skyrats_ws/install/setup.bash
+source ~/skyrats_ws2/install/setup.bash
 
 ros2 launch px4_ros_com sensor_combined_listener.launch.py
 ```
@@ -115,13 +115,13 @@ make px4_sitl_rtps gazebo
 
 On a new terminal, run:
 ```bash
-source ~/skyrats_ws/install/setup.bash
+source ~/skyrats_ws2/install/setup.bash
 
 micrortps_agent -t UDP
 ```
 And on a new terminal, run:
 ```bash
-source ~/skyrats_ws/install/setup.bash
+source ~/skyrats_ws2/install/setup.bash
 
 ros2 run px4_ros_com offboard_control
 ```

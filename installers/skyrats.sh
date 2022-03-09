@@ -45,9 +45,9 @@ draw_progress_bar 43
 echo -e "\n\n ... Install fastRTPS \n\n"
 bash "$MY_PATH/fastRTPS.sh" --no-gitman.sh
 
-## | ----------------------- create skyrats_ws ---------------------- |
+## | ----------------------- create skyrats_ws2 ---------------------- |
 draw_progress_bar 57
-echo -e "\n\n ... Create skyrats_ws \n\n"
+echo -e "\n\n ... Create skyrats_ws2 \n\n"
 bash "$MY_PATH/ros_ws.sh"
 
 ## | ---------------- install qgroundcontrol ---------------- |

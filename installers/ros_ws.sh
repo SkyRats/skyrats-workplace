@@ -4,7 +4,7 @@
 source ../lib/extra_tools.sh
 
 ## Name of workspace: USE YOUR CREATIVITY 
-NAME=skyrats_ws
+NAME=skyrats_ws2
 
 echo "$0: preparing ${NAME}"
 
