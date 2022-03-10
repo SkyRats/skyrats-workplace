@@ -22,10 +22,14 @@ sources:
     name: px4_ros_com
     rev: master
     type: git
+    links:
+      - target: ../skyrats_ws2/src/px4_ros_com
   - repo: https://github.com/PX4/px4_msgs.git 
     name: px4_msgs
     rev: master
     type: git
+    links:
+      - target: ../skyrats_ws2/src/px4_msgs
 
 default_group: ''
 groups:
