@@ -33,9 +33,9 @@ mkdir -p ~/${NAME}/src
 
 ## Install first test packages
 gitman install --force px4_ros_com px4_msgs
-echo "$0: moving packages to /${NAME}"
-sudo mv $MY_PATH/../src/px4_ros_com ~/${NAME}/src
-sudo mv $MY_PATH/../src/px4_msgs ~/${NAME}/src
+echo "$0: moving packages to ~/${NAME}"
+sudo mv --force $MY_PATH/../src/px4_ros_com ~/${NAME}/src
+sudo mv --force $MY_PATH/../src/px4_msgs ~/${NAME}/src
 
 ## Add colcon_cd dependecies in .bashrc 
 addToBashrc "source /usr/share/colcon_cd/function/colcon_cd.sh"
