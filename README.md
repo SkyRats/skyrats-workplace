@@ -3,6 +3,7 @@ Skyrats autonomous drone team developmet environment for quadcopters in real lif
 
 ## How to install?
 To install in a fresh ubuntu follow these steps:
+
 ```bash
 cd ~/
 
@@ -14,6 +15,10 @@ At this point you might want to configure your git ssh key before proceeding. Ot
 
 ```bash
 git clone https://github.com/SkyRats/skyrats-workplace.git
+
+cd ~/skyrats-workplace
+
+git checkout ros2
 ```
 Now let's install our environment:
 
@@ -22,6 +27,7 @@ cd ~/skyrats-workplace/installers
 
 bash skyrats.sh
 ```
+
 The `skyrats.sh` bash script will install everything you need to start your autonomous drone software development adventure, it should take a while though...
 
 Congrats! At this point you should have ROS galactic, Fast DDS, PX4 Firmware, QGroundControl and a new workspace sucessfully installed!
