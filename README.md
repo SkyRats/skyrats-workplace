@@ -12,7 +12,7 @@ sudo apt-get install git
 ```
 At this point you might want to configure your git ssh key before proceeding
 ```bash
-git clone git@github.com:SkyRats/skyrats-workplace.git
+git clone git@github.com:SkyRats/skyrats-workplace.git -b ros1
 
 cd skyrats-workplace/installers
 
@@ -39,7 +39,7 @@ If everything went right, you should be seeing and IRIS drone in an empty simula
 commander takeoff
 ```
 
-Now, we need to make this simulation work with ROS (so that we can send complex commands to the drone, not just takeoff) and we will do that with the **mavros** package, for it to work we need to finally setup your ros workspace and build it. 
+Now, we need to make this simulation work with ROS (so that we can send complex commands to the drone, not just takeoff) and we will do that with the **mavros** package, for it to work we need to finally setup your ros workspace and build it.
 
 To do so, try the following: (if your pc isn't great put a -j2 flag in the build command or it might crash)
 ```bash
