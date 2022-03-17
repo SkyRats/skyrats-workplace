@@ -14,11 +14,9 @@ git clone git@github.com:SkyRats/skyrats-workplace.git
 At this point you might want to configure your git ssh key before proceeding. Otherwise, use:
 
 ```bash
-git clone https://github.com/SkyRats/skyrats-workplace.git
+git clone https://github.com/SkyRats/skyrats-workplace.git -b ros2
 
 cd ~/skyrats-workplace
-
-git checkout ros2
 ```
 Now let's install our environment:
 
