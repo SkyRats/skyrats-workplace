@@ -9,19 +9,6 @@ sources:
     links:
       - source: ''
         target: ros_packages/px4_firmware
-    scripts:
-      - git submodule update --init --recursive --depth 
-  - repo: git@github.com:mavlink/mavlink-gbp-release.git
-    name: mavlink
-    rev: debian/ros-noetic-mavlink_2020.9.10-1_focal
-    type: git
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: ros_packages/mavlink
-    scripts:
-      - git submodule update --init --recursive
   - repo: git@github.com:mavlink/mavros.git
     name: mavros
     rev: 1.4.0
@@ -31,8 +18,6 @@ sources:
     links:
       - source: ''
         target: ros_packages/mavros
-    scripts:
-      - git submodule update --init --recursive
 default_group: ''
 groups:
   -

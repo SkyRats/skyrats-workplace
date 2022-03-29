@@ -12,7 +12,7 @@ sudo apt-get install git
 ```
 At this point you might want to configure your git ssh key before proceeding
 ```bash
-git clone git@github.com:SkyRats/skyrats-workplace.git -b ros1
+git clone git@github.com:SkyRats/skyrats-workplace.git -b ros1 --single-branch ros1-drone-workplace
 
 cd skyrats-workplace/installers
 
