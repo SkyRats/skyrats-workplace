@@ -12,7 +12,7 @@ sudo apt-get install git
 ```
 At this point you might want to configure your git ssh key before proceeding
 ```bash
-git clone git@github.com:SkyRats/skyrats-workplace.git -b ros1 --single-branch ros1-drone-workplace
+git clone git@github.com:SkyRats/skyrats-workplace.git -b ros1 --single-branch
 
 cd skyrats-workplace/installers
 
@@ -20,16 +20,16 @@ bash skyrats.sh
 ```
 The skyrats.sh bash script will install everything you need to start your autonomous drone software development adventure, it should take a while though...
 
-Congrats! At this point you should have ros noetic, mavlink, mavros, the px4 firmware and QGroundControl sucessfully installed!
+Congrats! At this point you should have ros noetic, mavlink, mavros, the px4 Autopilot and QGroundControl sucessfully installed!
 
-We will now run your first quadcopter simulation, for that we must compile the px4 firmware and make it work with gazebo, so type the following:
+We will now run your first quadcopter simulation, for that we must compile the px4 Autopilot and make it work with gazebo, so type the following:
 
 ```bash
 cd ~/skyrats_ws/src/skyrats-workplace/ros_packages
 
-sudo chmod 777 px4_firmware -R
+sudo chmod 777 PX4-Autopilot -R
 
-cd px4_firmware
+cd PX4-Autopilot
 
 make px4_sitl gazebo
 ```
