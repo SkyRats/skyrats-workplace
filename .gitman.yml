@@ -1,4 +1,4 @@
-location: .gitman
+location: src
 sources:
   - repo: git@github.com:SkyRats/PX4-Autopilot.git
     name: PX4-Autopilot

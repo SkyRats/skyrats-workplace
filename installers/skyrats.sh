@@ -35,7 +35,7 @@ sudo -H pip3 install kconfiglib
 sudo -H pip3 install --user jsonschema
 
 
-sudo bash $MY_PATH/../ros_packages/PX4-Autopilot/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tool
+sudo bash $MY_PATH/../src/PX4-Autopilot/Tools/setup/ubuntu.sh --no-nuttx --no-sim-tool
 
 sudo apt-get update
 #to fix mrs_gazebo_common_resources build on Ubuntu 20.04
