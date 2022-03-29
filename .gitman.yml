@@ -2,7 +2,7 @@ location: src
 sources:
   - repo: git@github.com:SkyRats/PX4-Autopilot.git
     name: PX4-Autopilot
-    rev: master
+    rev: release/1.12
     type: git
     scripts:
       - git submodule update --init --recursive --force
@@ -10,9 +10,9 @@ sources:
     name: mavros
     rev: master
     type: git
-  - repo: git@github.com:mavlink/mavlink.git --recursive
+  - repo: git@github.com:mavlink/mavlink-gbp-release.git
     name: mavlink
-    rev: master
+    rev: release/noetic/mavlink
     type: git
     
 default_group: ''
