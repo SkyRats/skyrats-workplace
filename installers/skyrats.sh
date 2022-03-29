@@ -13,8 +13,23 @@ source ../lib/extra_tools.sh
 ## Source progress bar
 source ../lib/progress_bar.sh
 
-## Go to this file's path
+## Initialize variables
+SBC_SCRIPT="false"
+# Go to this file's path
 MY_PATH=`whereAmIFrom`
+
+## Parse arguments
+for arg in "$@"
+do
+	if [[ $arg == "--sbc" ]]; then
+		SBC_SCRIPT="true"
+	else if [[ $arg != $0 ]]; then
+		echo "$arg do not recognized"
+        echo "  Possible flags:"
+        echo "  --sbc : version to use in single boards computers"
+        exit 0;
+    fi
+done
 
 ## Add description in .bashrc
 addToBashrc "## SKYRATS setups:"
@@ -36,24 +51,28 @@ echo -e "\n\n ... Install gitman \n\n"
 bash "$MY_PATH/gitman.sh"
 
 ## | ---------------- install px4 dependencies ---------------- |
-draw_progress_bar 29
-echo -e "\n\n ... Install px4 dependencies \n\n"
-bash "$MY_PATH/px4.sh" --no-gitman.sh
+if [[ SBC_SCRIPT="false" ]]; then 
+    draw_progress_bar 29
+    echo -e "\n\n ... Install px4 dependencies \n\n"
+    bash "$MY_PATH/px4.sh" --no-gitman.sh
+fi
 
 ## | ------------------- install fastRTPS --------------------- |
 draw_progress_bar 43
 echo -e "\n\n ... Install fastRTPS \n\n"
 bash "$MY_PATH/fastRTPS.sh" --no-gitman.sh
 
-## | ----------------------- create skyrats_ws2 ---------------------- |
+## | ------------------ create skyrats_ws2 ---------------------- |
 draw_progress_bar 57
 echo -e "\n\n ... Create skyrats_ws2 \n\n"
 bash "$MY_PATH/ros_ws.sh" --no-gitman.sh
 
 ## | ---------------- install qgroundcontrol ---------------- |
-draw_progress_bar 72
-echo -e "\n\n ... Install qgroundcontrol \n\n"
-bash "$MY_PATH/qgroundcontrol.sh"
+if [[ SBC_SCRIPT="false" ]]; then 
+    draw_progress_bar 72
+    echo -e "\n\n ... Install qgroundcontrol \n\n"
+    bash "$MY_PATH/qgroundcontrol.sh"
+fi
 
 ## | -------------- install aditional softwares -------------- |
 draw_progress_bar 86
