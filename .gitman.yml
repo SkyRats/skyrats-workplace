@@ -8,7 +8,11 @@ sources:
       - git submodule update --init --recursive --force
   - repo: git@github.com:mavlink/mavros.git
     name: mavros
-    rev: 1.4.0
+    rev: master
+    type: git
+  - repo: git@github.com:mavlink/mavlink.git --recursive
+    name: mavlink
+    rev: master
     type: git
     
 default_group: ''
