@@ -6,20 +6,11 @@ sources:
     type: git
     scripts:
       - git submodule update --init --recursive --force
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: ros_packages/PX4-Autopilot
   - repo: git@github.com:mavlink/mavros.git
     name: mavros
     rev: 1.4.0
     type: git
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: ros_packages/mavros
+    
 default_group: ''
 groups:
   -
