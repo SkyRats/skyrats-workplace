@@ -25,7 +25,7 @@ Congrats! At this point you should have ros noetic, mavlink, mavros, the px4 Aut
 We will now run your first quadcopter simulation, for that we must compile the px4 Autopilot and make it work with gazebo, so type the following:
 
 ```bash
-cd ~/skyrats_ws/src/skyrats-workplace/ros_packages
+cd ~/skyrats_ws/src/skyrats-workplace/src
 
 sudo chmod 777 PX4-Autopilot -R
 
