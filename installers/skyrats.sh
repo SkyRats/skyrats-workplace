@@ -23,12 +23,15 @@ for arg in "$@"
 do
 	if [[ $arg == "--sbc" ]]; then
 		SBC_SCRIPT="true"
-	else if [[ $arg != $0 ]]; then
-		echo "$arg do not recognized"
-        echo "  Possible flags:"
-        echo "  --sbc : version to use in single boards computers"
-        exit 0;
-    fi
+	else 
+		if [[ $arg != $0 ]]; then
+			echo "$arg do not recognized"
+			echo "  Possible flags:"
+			echo "  --sbc : version to use in single boards computers"
+			exit 0;
+		fi
+		
+    	fi
 done
 
 ## Add description in .bashrc
