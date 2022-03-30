@@ -7,7 +7,7 @@ source ../lib/extra_tools.sh
 ## Check for UTF-8 
 LOCALE=`locale`
 SUBLOCALE=${LOCALE:11:5}
-if [ $SUBLOCALE != "UTF-8"  ]; then
+if [[ $SUBLOCALE != "UTF-8"  ]]; then
     echo "$0: locale did not return UTF-8. Try, f.e.:
     sudo apt update && sudo apt install locales
     sudo locale-gen en_US en_US.UTF-8
