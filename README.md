@@ -9,7 +9,7 @@ cd ~/
 
 sudo apt-get install git
 
-git clone git@github.com:SkyRats/skyrats-workplace.git
+git clone git@github.com:SkyRats/skyrats-workplace.git -b ros2
 ```
 At this point you might want to configure your git ssh key before proceeding. Otherwise, use:
 
