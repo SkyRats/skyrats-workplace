@@ -2,7 +2,7 @@ location: src
 sources:
   - repo: git@github.com:SkyRats/PX4-Autopilot.git
     name: PX4-Autopilot
-    rev: release/1.12
+    rev: master
     type: git
     scripts:
       - git submodule update --init --recursive --force
