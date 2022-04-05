@@ -39,7 +39,7 @@ sudo mv --force $MY_PATH/../src/px4_msgs ~/${NAME}/src
 
 ## Add colcon_cd dependecies in .bashrc 
 addToBashrc "source /usr/share/colcon_cd/function/colcon_cd.sh"
-addToBashrc "export _colcon_cd_root=/opt/ros/galactic/"
+addToBashrc "export _colcon_cd_root=/opt/ros/foxy/"
 addToBashrc "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash"
 
 ## We decided not to build it, because of the plenty number of errors

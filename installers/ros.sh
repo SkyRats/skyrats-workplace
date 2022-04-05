@@ -29,13 +29,13 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 
 ## Install ROS
 sudo apt update
-sudo apt install -y ros-galactic-desktop
+sudo apt install -y ros-foxy-desktop
 
 ## Sourcing the setup script
-source /opt/ros/galactic/setup.bash
+source /opt/ros/foxy/setup.bash
 
 ## Add ROS' setup.bash in bash.rc 
-addToBashrc "source /opt/ros/galactic/setup.bash"
+addToBashrc "source /opt/ros/foxy/setup.bash"
 
 ## Install RQT
-sudo apt install -y ~nros-galactic-rqt*
+sudo apt install -y ~nros-foxy-rqt*

@@ -13,7 +13,7 @@ sudo apt -y install python3-future python3-lxml
 sudo apt -y install python3-jinja2 python3-markupsafe
 
 ## Install Mavlink
-sudo apt -y install ros-galactic-mavlink ros-galactic-libmavconn 
+sudo apt -y install ros-foxy-mavlink ros-foxy-libmavconn 
 
 ## Others Qground dependencies
 sudo usermod -a -G dialout $USER

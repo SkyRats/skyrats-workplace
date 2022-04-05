@@ -1,0 +1,14 @@
+fastrtps:
+ros-foxy-eigen3-cmake-module
+ros-foxy-rmw-fastrtps-cpp
+
+mavlink (qgc):
+ros-foxy-mavlink ros-foxy-libmavconn
+
+ros_ws:
+"export _colcon_cd_root=/opt/ros/foxy/"
+
+ros:
+ros-foxy-desktop
+source /opt/ros/foxy/setup.bash
+~nros-foxy-rqt*

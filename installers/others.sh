@@ -1,7 +1,6 @@
 echo "$0: installing general dependencies"
 
 ## TODO:search necessity
-#sudo apt install ros-galactic-eigen3-cmake-module
 #sudo pip3 install -U empy pyros-genmsg setuptools
 
 ## TODO: Open-cv

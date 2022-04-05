@@ -24,7 +24,7 @@ if [ $INSTALL_GITMAN == "true" ]; then
 fi
 
 ## Install additional DDS implementations
-sudo apt install -y ros-galactic-rmw-fastrtps-cpp
+sudo apt install -y ros-foxy-rmw-fastrtps-cpp
 
 ## Switch to rmw_fastrtps
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
@@ -33,7 +33,7 @@ addToBashrc "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp"
 ## Install dependencies
 sudo apt install -y python3-setuptools python3-pip
 sudo apt install -y python3-colcon-common-extensions
-sudo apt install -y ros-galactic-eigen3-cmake-module
+sudo apt install -y ros-foxy-eigen3-cmake-module
 sudo pip3 install -U empy pyros-genmsg setuptools testresources
 
 ## Install Java 13
