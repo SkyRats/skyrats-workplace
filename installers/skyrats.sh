@@ -60,10 +60,15 @@ if [[ SBC_SCRIPT="false" ]]; then
     bash "$MY_PATH/px4.sh" --no-gitman.sh
 fi
 
-## | ------------------- install fastRTPS --------------------- |
+### | ------------------- install fastRTPS --------------------- |
+#draw_progress_bar 43
+#echo -e "\n\n ... Install fastRTPS \n\n"
+#bash "$MY_PATH/fastRTPS.sh" --no-gitman.sh
+
+## | ------------- install mavlink and mavros --------------------- |
 draw_progress_bar 43
-echo -e "\n\n ... Install fastRTPS \n\n"
-bash "$MY_PATH/fastRTPS.sh" --no-gitman.sh
+echo -e "\n\n ... Install mavlink and mavros \n\n"
+bash "$MY_PATH/mavlink\&mavros.sh" --no-gitman.sh 
 
 ## | ------------------ create skyrats_ws2 ---------------------- |
 draw_progress_bar 57
@@ -74,7 +79,7 @@ bash "$MY_PATH/ros_ws.sh" --no-gitman.sh
 if [[ SBC_SCRIPT="false" ]]; then 
     draw_progress_bar 72
     echo -e "\n\n ... Install qgroundcontrol \n\n"
-    bash "$MY_PATH/qgroundcontrol.sh"
+    bash "$MY_PATH/qgroundcontrol.sh" --no-gitman.sh --no-mavlink-installation
 fi
 
 ## | -------------- install aditional softwares -------------- |
