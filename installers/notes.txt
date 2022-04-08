@@ -12,3 +12,14 @@ ros:
 ros-foxy-desktop
 source /opt/ros/foxy/setup.bash
 ~nros-foxy-rqt*
+
+
+-----
+ -> mavlink.sh
+    
+ -> mavros.sh
+    Baixar o package em /src
+    Buildar
+ -> ros_source.sh
+    seguir tutorial 
+    mas instalar package no /src, e nao na home
