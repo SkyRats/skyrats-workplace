@@ -60,4 +60,4 @@ colcon build
 ## Make sure that you use setup.bash or setup.zsh from workspace.
 #    Else ros2 run can't find nodes from this workspace.
 source install/setup.bash
-addToBashrc "source $MY_PATH/../src/catkin_ws/install/setup.bash"
+addToBashrc "source $MY_PATH/../src/mavros-mavlink_ws/install/setup.bash"
