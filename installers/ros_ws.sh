@@ -5,8 +5,9 @@ source ../lib/extra_tools.sh
 
 ## Initialize variables
 INSTALL_GITMAN="true"
-# Name of workspace: USE YOUR CREATIVITY 
-# Attention: if you change this name, change also into .gitman.yml
+BUILD="false"
+# Name of workspace
+# Attention: if you change this name, change also into mavlink&mavros.sh
 NAME=skyrats_ws2
 
 ## Get and go to this file's path
@@ -17,6 +18,9 @@ for arg in "$@"
 do
 	if [[ $arg == "--no-gitman.sh" ]]; then
 		INSTALL_GITMAN="false"
+	fi
+	if [[ $arg == "--build" ]]; then
+		BUILD="true"
 	fi
 done
 
@@ -34,16 +38,17 @@ mkdir -p ~/${NAME}/src
 ## Install first test packages
 gitman install --force px4_ros_com px4_msgs
 echo "$0: moving packages to ~/${NAME}"
-sudo mv --force $MY_PATH/../src/px4_ros_com ~/${NAME}/src
-sudo mv --force $MY_PATH/../src/px4_msgs ~/${NAME}/src
+sudo mv --force "$MY_PATH/../src/px4_ros_com" ~/${NAME}/src
+sudo mv --force "$MY_PATH/../src/px4_msgs" ~/${NAME}/src
 
 ## Add colcon_cd dependecies in .bashrc 
 addToBashrc "source /usr/share/colcon_cd/function/colcon_cd.sh"
-addToBashrc "export _colcon_cd_root=/opt/ros/foxy/"
+addToBashrc "export _colcon_cd_root=/opt/ros/galactic/"
 addToBashrc "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash"
 
-## We decided not to build it, because of the plenty number of errors
+## We decided not to build it by default, because of the plenty number of errors
 #colcon build --symlink-install
-
-## Add workspace's setup.bash in .bashrc
 #addToBashrc "source ~/$NAME/install/setup.bash"
+#if [[ $BUILD == "true" ]]; then
+#	
+#fi
