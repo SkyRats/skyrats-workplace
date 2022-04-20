@@ -12,6 +12,7 @@ INSTALL_GITMAN="true"
 CREATE_WS="true"
 INSTALL_MAVROS="true"
 BUILD="false"
+FORCE_UPDATE="false"
 
 ## Parse arguments
 for arg in "$@"
@@ -27,6 +28,9 @@ do
 	fi
     if [[ $arg == "--build" ]]; then
 		BUILD="true"
+	fi
+    if [[ $arg == "--force" ]]; then
+		FORCE_UPDATE="true"
 	fi
 done
 
@@ -49,12 +53,30 @@ else
 fi
 
 ## Move packages to skyrats_ws2
-if [ $INSTALL_MAVROS == "true" ]
+# mavlink
+if [[ `find ~/skyrats_ws2/src/mavlink` != "" ]]
 then
+    if [[ FORCE_UPDATE == "true" ]]
+    then
+        sudo rm -rf ~/skyrats_ws2/src/mavlink
+        sudo mv --update "$MY_PATH/../src/mavlink" ~/skyrats_ws2/src
+    fi
+else
     sudo mv --update "$MY_PATH/../src/mavlink" ~/skyrats_ws2/src
-    sudo mv --update "$MY_PATH/../src/mavros" ~/skyrats_ws2/src
-else 
-    sudo mv --update "$MY_PATH/../src/mavlink" ~/skyrats_ws2/src
+fi
+# mavros
+if [ $INSTALL_MAVROS == "true"  ]
+then
+        if [[ `find ~/skyrats_ws2/src/mavros` != "" ]]
+    then
+        if [[ FORCE_UPDATE == "true" ]]
+        then
+            sudo rm -rf ~/skyrats_ws2/src/mavlink
+            sudo mv --update "$MY_PATH/../src/mavros" ~/skyrats_ws2/src
+        fi
+    else
+        sudo mv --update "$MY_PATH/../src/mavros" ~/skyrats_ws2/src
+    fi
 fi
 
 ## Install dependencies to build
@@ -64,7 +86,7 @@ sudo apt install -y ros-galactic-diagnostic-updater
 sudo apt install -y ros-galactic-eigen-stl-containers
 echo ""
 
-## We decided not to build ithe workspace by default, because of the plenty number of errors
+## We decided not to build the workspace by default, because of the plenty number of errors
 if [[ $BUILD == "true" ]]; then
 	cd ~/skyrats_ws2/
 	colcon build --symlink-install
