@@ -41,7 +41,13 @@ fi
 
 ## Run ros_ws.sh
 if [ $CREATE_WS == "true" ]; then
-    bash "$MY_PATH/ros_ws.sh" --no-gitman.sh
+    if [[ FORCE_UPDATE == "true" ]]
+    then
+        bash "$MY_PATH/ros_ws.sh" --no-gitman.sh --force
+    else
+        bash "$MY_PATH/ros_ws.sh" --no-gitman.sh
+    fi
+
 fi
 
 ## Clone repositories
@@ -71,7 +77,7 @@ then
     then
         if [[ FORCE_UPDATE == "true" ]]
         then
-            sudo rm -rf ~/skyrats_ws2/src/mavlink
+            sudo rm -rf ~/skyrats_ws2/src/mavros
             sudo mv --update "$MY_PATH/../src/mavros" ~/skyrats_ws2/src
         fi
     else
@@ -91,7 +97,7 @@ if [[ $BUILD == "true" ]]; then
 	cd ~/skyrats_ws2/
 	colcon build --symlink-install
 	addToBashrc "source ~/skyrats_ws2/install/setup.bash"
-	cd ~/${MY_PATH}/
+	cd "${MY_PATH}"
 fi
 
 
