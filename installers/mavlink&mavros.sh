@@ -68,9 +68,7 @@ echo ""
 if [[ $BUILD == "true" ]]; then
 	cd ~/skyrats_ws2/
 	colcon build --symlink-install
-	addToBa
-    
-    shrc "source ~/skyrats_ws2/install/setup.bash"
+	addToBashrc "source ~/skyrats_ws2/install/setup.bash"
 	cd ~/${MY_PATH}/
 fi
 
