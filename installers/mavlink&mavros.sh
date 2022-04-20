@@ -11,6 +11,7 @@ MY_PATH=`whereAmIFrom`
 INSTALL_GITMAN="true"
 CREATE_WS="true"
 INSTALL_MAVROS="true"
+BUILD="false"
 
 ## Parse arguments
 for arg in "$@"
@@ -23,6 +24,9 @@ do
 	fi
     if [[ $arg == "--no-mavros-installation" ]]; then
 		INSTALL_MAVROS="false"
+	fi
+    if [[ $arg == "--build" ]]; then
+		BUILD="true"
 	fi
 done
 
@@ -50,18 +54,27 @@ then
     sudo mv --update "$MY_PATH/../src/mavlink" ~/skyrats_ws2/src
     sudo mv --update "$MY_PATH/../src/mavros" ~/skyrats_ws2/src
 else 
-    sudo mv --update "$MY_PATH/../src/mavlink ~/skyrats_ws2/src"
+    sudo mv --update "$MY_PATH/../src/mavlink" ~/skyrats_ws2/src
 fi
 
 ## Install dependencies to build
+sudo apt install -y libgeographic-dev 
 sudo apt install -y ros-galactic-geographic-msgs
 sudo apt install -y ros-galactic-diagnostic-updater
 sudo apt install -y ros-galactic-eigen-stl-containers
+echo ""
 
-## Build workplace
-cd ~/skyrats_ws2/
-colcon build
-cd "$MY_PATH"
+## We decided not to build ithe workspace by default, because of the plenty number of errors
+if [[ $BUILD == "true" ]]; then
+	cd ~/skyrats_ws2/
+	colcon build --symlink-install
+	addToBa
+    
+    shrc "source ~/skyrats_ws2/install/setup.bash"
+	cd ~/${MY_PATH}/
+fi
+
+
 
 
 ##OLD SCRIPT
