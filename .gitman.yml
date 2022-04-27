@@ -8,7 +8,7 @@ sources:
       - git submodule update --init --recursive --force
   - repo: https://github.com/mavlink/mavlink-gbp-release
     name: mavlink
-    rev: debian/galactic/focal/mavlink
+    rev: debian/foxy/focal/mavlink
     type: git
   - repo: https://github.com/mavlink/mavros
     name: mavros

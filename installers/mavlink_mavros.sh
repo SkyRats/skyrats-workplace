@@ -87,9 +87,9 @@ fi
 
 ## Install dependencies to build
 sudo apt install -y libgeographic-dev 
-sudo apt install -y ros-galactic-geographic-msgs
-sudo apt install -y ros-galactic-diagnostic-updater
-sudo apt install -y ros-galactic-eigen-stl-containers
+sudo apt install -y ros-foxy-geographic-msgs
+sudo apt install -y ros-foxy-diagnostic-updater
+sudo apt install -y ros-foxy-eigen-stl-containers
 echo ""
 
 ## We decided not to build the workspace by default, because of the plenty number of errors

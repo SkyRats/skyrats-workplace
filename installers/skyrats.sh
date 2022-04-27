@@ -65,15 +65,15 @@ fi
 #echo -e "\n\n ... Install fastRTPS \n\n"
 #bash "$MY_PATH/fastRTPS.sh" --no-gitman.sh
 
-## | ------------- install mavlink and mavros --------------------- |
+## | ------------- create skyrats_ws2 --------------------- |
 draw_progress_bar 43
-echo -e "\n\n ... Install mavlink and mavros \n\n"
-bash "$MY_PATH/mavlink\&mavros.sh" --no-gitman.sh 
-
-## | ------------------ create skyrats_ws2 ---------------------- |
-draw_progress_bar 57
 echo -e "\n\n ... Create skyrats_ws2 \n\n"
 bash "$MY_PATH/ros_ws.sh" --no-gitman.sh
+
+## | ------------------ install mavlink and mavros  ---------------------- |
+draw_progress_bar 57
+echo -e "\n\n ... Install mavlink and mavros \n\n"
+bash "$MY_PATH/mavlink_mavros.sh" --no-ros_ws.sh
 
 ## | ---------------- install qgroundcontrol ---------------- |
 if [[ SBC_SCRIPT="false" ]]; then 
