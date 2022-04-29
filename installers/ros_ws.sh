@@ -8,7 +8,7 @@ INSTALL_GITMAN="true"
 BUILD="false"
 FORCE_UPDATE="false"
 # Name of workspace
-# Attention: if you change this name, change also into mavlink&mavros.sh
+# Attention: if you change this name, change also into mavlink_mavros.sh
 NAME=skyrats_ws2
 
 ## Get and go to this file's path
@@ -39,31 +39,31 @@ echo "$0: preparing /${NAME}"
 sudo apt install -y python3-colcon-common-extensions
 mkdir -p ~/${NAME}/src
 
-## Install first test packages
-gitman install --force px4_ros_com px4_msgs
-echo "$0: moving packages to ~/${NAME}"
-# px4_ros_com
-if [[ `find ~/${NAME}/src/px4_ros_com` != "" ]]
-then
-    if [[ FORCE_UPDATE == "true" ]]
-    then
-        sudo rm -rf ~/${NAME}/src/px4_ros_com
-        sudo mv --update "$MY_PATH/../src/px4_ros_com" ~/${NAME}/src
-    fi
-else
-    sudo mv --update "$MY_PATH/../src/px4_ros_com" ~/${NAME}/src
-fi
-# px4_msgs
-if [[ `find ~/${NAME}/src/px4_msgs` != "" ]]
-then
-    if [[ FORCE_UPDATE == "true" ]]
-    then
-        sudo rm -rf ~/${NAME}/src/px4_msgs
-        sudo mv --update "$MY_PATH/../src/px4_msgs" ~/${NAME}/src
-    fi
-else
-    sudo mv --update "$MY_PATH/../src/px4_msgs" ~/${NAME}/src
-fi
+### Install first test packages
+#gitman install --force px4_ros_com px4_msgs
+#echo "$0: moving packages to ~/${NAME}"
+## px4_ros_com
+#if [[ `find ~/${NAME}/src/px4_ros_com` != "" ]]
+#then
+#    if [[ FORCE_UPDATE == "true" ]]
+#    then
+#        sudo rm -rf ~/${NAME}/src/px4_ros_com
+#        sudo mv --update "$MY_PATH/../src/px4_ros_com" ~/${NAME}/src
+#    fi
+#else
+#    sudo mv --update "$MY_PATH/../src/px4_ros_com" ~/${NAME}/src
+#fi
+## px4_msgs
+#if [[ `find ~/${NAME}/src/px4_msgs` != "" ]]
+#then
+#    if [[ FORCE_UPDATE == "true" ]]
+#    then
+#        sudo rm -rf ~/${NAME}/src/px4_msgs
+#        sudo mv --update "$MY_PATH/../src/px4_msgs" ~/${NAME}/src
+#    fi
+#else
+#    sudo mv --update "$MY_PATH/../src/px4_msgs" ~/${NAME}/src
+#fi
 
 
 ## Add colcon_cd dependecies in .bashrc 
