@@ -37,7 +37,7 @@ fi
 
 ## Install Mavlink
 if [ $INSTALL_MAVLINK == "true" ]; then
-    bash "$MY_PATH/mavlink\&mavros.sh" --no-gitman.sh --no-mavros-installation
+    bash "$MY_PATH/mavlink_mavros.sh" --no-gitman.sh --no-mavros-installation
 fi
 
 ## Others Qground dependencies
