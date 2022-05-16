@@ -10,10 +10,14 @@ sources:
     name: mavlink
     rev: debian/foxy/focal/mavlink
     type: git
+    scripts:
+      - git submodule update --init --recursive --force
   - repo: https://github.com/mavlink/mavros
     name: mavros
     rev: ros2
     type: git
+    scripts:
+      - git submodule update --init --recursive --force
   - repo: https://github.com/eProsima/foonathan_memory_vendor.git
     name: foonathan_memory_vendor
     rev: master
