@@ -91,6 +91,7 @@ sudo apt install -y ros-foxy-geographic-msgs
 sudo apt install -y ros-foxy-diagnostic-updater
 sudo apt install -y ros-foxy-eigen-stl-containers
 sudo apt-get install -y libasio-dev
+sudo apt-get install -y ros-foxy-mavlink
 echo ""
 
 ## We decided not to build the workspace by default, because of the plenty number of errors
