@@ -1,5 +1,7 @@
 echo "$0: installing general dependencies"
 
+## Simulation dependencies
+sudo apt install ros-foxy-gazebo-*
 ## TODO:search necessity
 #sudo pip3 install -U empy pyros-genmsg setuptools
 
