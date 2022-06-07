@@ -28,7 +28,7 @@ fi
 
 ### Mavlink dependencies
 #sudo apt install -y python3-setuptools python3-pip
-#pip3 install --user future
+pip3 install --user future
 #sudo apt -y install python3-future python3-lxml 
 #sudo apt -y install python3-jinja2 python3-markupsafe
 #
