@@ -47,6 +47,9 @@ sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
 sudo apt install libqt5gui5 -y
 
 ## Get QGroundControl
-cd "$MY_PATH/.."
-wget https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage
-chmod +x ./QGroundControl.AppImage
+FILE="$MY_PATH/../QGroundControl.AppImage"
+if [[ ! -f $FILE ]]; then
+	cd "$MY_PATH/.."
+	wget https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage
+	chmod +x ./QGroundControl.AppImage
+fi
