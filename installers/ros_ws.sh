@@ -70,11 +70,11 @@ mkdir -p ~/${NAME}/src
 addToBashrc "source /usr/share/colcon_cd/function/colcon_cd.sh"
 addToBashrc "export _colcon_cd_root=/opt/ros/foxy/"
 addToBashrc "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash"
+addToBashrc "source ~/$NAME/install/setup.bash"
 
 ## We decided not to build it by default, because of the plenty number of errors
 if [[ $BUILD == "true" ]]; then
 	cd ~/${NAME}/
 	colcon build --symlink-install
-	addToBashrc "source ~/$NAME/install/setup.bash"
 	cd ~/${MY_PATH}/
 fi
