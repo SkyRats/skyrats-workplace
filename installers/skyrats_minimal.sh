@@ -52,4 +52,4 @@ rosdep update
 rosdep install --from-paths src --ignore-src -y --skip-keys "fastcdr rti-connext-dds-5.3.1 urdfdom_headers"
 
 cd ~/ros2_foxy/
-colcon build --symlink-install
+MAKEFLAG="-j 2" colcon build --symlink-install
