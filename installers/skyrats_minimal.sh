@@ -3,6 +3,7 @@ git clone git@github.com:AlexisTM/ros2-odroidxu4.git
 cd ros2-odroidxu4
 
 sudo mkdir /opt/toolchains
+wget http://dn.odroid.com/ODROID-XU/compiler/arm-eabi-4.6.tar.gz
 sudo cp arm-eabi-4.6.tar.gz /opt/toolchains
 cd /opt/toolchains
 sudo tar zxvf arm-eabi-4.6.tar.gz
