@@ -62,6 +62,16 @@ commander takeoff
 
 And that should be it! if something went wrong be sure to source and build once again (just to be sure, it is weird sometimes), if the problem persists, be sure to check the **issues** tab for insight
 
+## Adding other packages
+If the necessity arrives to add other packages that aren't already installed, just use ```git clone``` to copy the desired package into ```/src```
+
+Remember to source and build your workspace with:
+``` bash
+cd ~/skyrats_ws2
+source install/setup.bash
+colcon build --symlink-install --packages-select [PACKAGE NAME HERE]
+```
+
 ## References
 1. [ROS Foxy Installation Guide](https://docs.ros.org/en/foxy/Installation.html)
 2. [ROS Wiki- mavros](http://wiki.ros.org/mavros)
