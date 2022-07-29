@@ -47,23 +47,25 @@ This is the first way to check if the installation succeeded. In case it doesn't
 
 ## Simulation
 
-We will now run your first quadcopter simulation, for that we must compile the PX4 Firmware and make it work with Gazebo, so type the following:
+We will now run your first quadcopter simulation, for that we must compile the PX4 Firmware and make it work with Gazebo, so type the following and select the desired world:
 
 ```bash
-cd ~/skyrats-workplace/src/PX4-Autopilot
+cd ~/skyrats_ws2/src/simulation2/scripts
 
-make px4_sitl gazebo
+bash simulate.sh
 ```
-If everything went right, you should be seeing and IRIS drone in an empty simulation enviroment, to see it flying type the following **in the same terminal you ran the make command**:
+If everything went right, you should be seeing and IRIS drone in a simulation enviroment, you can now test mavros by typing:
 
 ```bash
-commander takeoff
+ros2 launch mavbase2 px4_sitl.launch.py
 ```
+
+To control the drone use the mavbase2 library!
 
 And that should be it! if something went wrong be sure to source and build once again (just to be sure, it is weird sometimes), if the problem persists, be sure to check the **issues** tab for insight
 
 ## Adding other packages
-If the necessity arrives to add other packages that aren't already installed, just use ```git clone``` to copy the desired package into ```/src```
+If the necessity arrives to add other packages that aren't already installed, just use ```git clone``` to copy the desired package into ```~/skyrats_ws2/src```
 
 Remember to source and build your workspace with:
 ``` bash
@@ -76,3 +78,5 @@ colcon build --symlink-install --packages-select [PACKAGE NAME HERE]
 1. [ROS Foxy Installation Guide](https://docs.ros.org/en/foxy/Installation.html)
 2. [ROS Wiki- mavros](http://wiki.ros.org/mavros)
 3. [QGroundControl Installation Guide](https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html)
+4. [Mavbase2](https://github.com/SkyRats/mavbase2)
+5. [Simulation2](https://github.com/SkyRats/simulation2)
