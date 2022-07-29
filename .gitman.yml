@@ -18,6 +18,14 @@ sources:
     type: git
     scripts:
       - git submodule update --init --recursive --force
+  - repo: https://github.com/SkyRats/simulation2
+    name: simulation2
+    rev: main
+    type: git
+  - repo: https://github.com/SkyRats/mavbase2
+    name: mavbase2
+    rev: main
+    type: git
   - repo: https://github.com/eProsima/foonathan_memory_vendor.git
     name: foonathan_memory_vendor
     rev: master

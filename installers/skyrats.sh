@@ -75,6 +75,15 @@ draw_progress_bar 57
 echo -e "\n\n ... Install mavlink and mavros \n\n"
 bash "$MY_PATH/mavlink_mavros.sh" --no-ros_ws.sh
 
+## | -------------- install mavbase and simulation -------------- |
+echo -e "\n\n ... Downloading mavbase \n\n"
+bash "$MY_PATH/mavbase.sh"
+if [[ SBC_SCRIPT="false" ]]; then 
+    draw_progress_bar 72
+    echo -e "\n\n ... Downloading simulation \n\n"
+	bash "$MY_PATH/simulation.sh"
+fi
+
 ## | ---------------- install qgroundcontrol ---------------- |
 if [[ SBC_SCRIPT="false" ]]; then 
     draw_progress_bar 72
