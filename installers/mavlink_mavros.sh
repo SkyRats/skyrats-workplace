@@ -92,6 +92,9 @@ sudo apt install -y ros-foxy-diagnostic-updater
 sudo apt install -y ros-foxy-eigen-stl-containers
 sudo apt-get install -y libasio-dev
 sudo apt-get install -y ros-foxy-mavlink
+sudo apt install libgeographic-dev geographiclib-tools
+cd ~/skyrats_ws2/src/mavros/mavros/scripts
+sudo ./install_geographiclib_datasets.sh
 echo ""
 
 ## We decided not to build the workspace by default, because of the plenty number of errors
