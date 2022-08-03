@@ -1,0 +1,50 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:srv/DeleteEntity.idl
+// generated code does not contain a copyright notice
+
+#ifndef __gazebo_msgs__srv__delete_entity__idl__
+#define __gazebo_msgs__srv__delete_entity__idl__
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct DeleteEntity_Request_ {
+string name_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct DeleteEntity_Response_ {
+boolean success_;
+string status_message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__srv__delete_entity__idl__

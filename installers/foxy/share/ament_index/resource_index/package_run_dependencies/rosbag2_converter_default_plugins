@@ -1,0 +1,1 @@
+ament_index_cpp;pluginlib;rosidl_runtime_cpp;rcpputils;rmw;rmw_fastrtps_cpp;rosbag2_cpp;ament_cmake_gmock;ament_lint_auto;ament_lint_common;rosbag2_test_common;test_msgs

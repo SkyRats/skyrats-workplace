@@ -1,0 +1,34 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:msg/PerformanceMetrics.idl
+// generated code does not contain a copyright notice
+#include "gazebo_msgs/msg/dds_connext/SensorPerformanceMetric_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __gazebo_msgs__msg__performance_metrics__idl__
+#define __gazebo_msgs__msg__performance_metrics__idl__
+
+
+module gazebo_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct PerformanceMetrics_ {
+std_msgs::msg::dds_::Header_ header_;
+double real_time_factor_;
+sequence<gazebo_msgs::msg::dds_::SensorPerformanceMetric_> sensors_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__msg__performance_metrics__idl__

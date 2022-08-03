@@ -1,0 +1,56 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:srv/SetJointTrajectory.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Pose_.idl"
+#include "trajectory_msgs/msg/dds_connext/JointTrajectory_.idl"
+
+#ifndef __gazebo_msgs__srv__set_joint_trajectory__idl__
+#define __gazebo_msgs__srv__set_joint_trajectory__idl__
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetJointTrajectory_Request_ {
+string model_name_;
+trajectory_msgs::msg::dds_::JointTrajectory_ joint_trajectory_;
+geometry_msgs::msg::dds_::Pose_ model_pose_;
+boolean set_model_pose_;
+boolean disable_physics_updates_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetJointTrajectory_Response_ {
+boolean success_;
+string status_message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__srv__set_joint_trajectory__idl__

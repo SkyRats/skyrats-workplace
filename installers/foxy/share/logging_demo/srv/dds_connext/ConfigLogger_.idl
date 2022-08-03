@@ -1,0 +1,50 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from logging_demo:srv/ConfigLogger.idl
+// generated code does not contain a copyright notice
+
+#ifndef __logging_demo__srv__config_logger__idl__
+#define __logging_demo__srv__config_logger__idl__
+
+
+module logging_demo {
+
+module srv {
+
+module dds_ {
+
+
+struct ConfigLogger_Request_ {
+string logger_name_;
+string level_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module logging_demo
+
+
+module logging_demo {
+
+module srv {
+
+module dds_ {
+
+
+struct ConfigLogger_Response_ {
+boolean success_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module logging_demo
+
+
+#endif  // __logging_demo__srv__config_logger__idl__

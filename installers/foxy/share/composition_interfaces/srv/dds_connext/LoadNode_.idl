@@ -1,0 +1,63 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from composition_interfaces:srv/LoadNode.idl
+// generated code does not contain a copyright notice
+#include "rcl_interfaces/msg/dds_connext/Parameter_.idl"
+
+#ifndef __composition_interfaces__srv__load_node__idl__
+#define __composition_interfaces__srv__load_node__idl__
+
+
+module composition_interfaces {
+
+module srv {
+
+module dds_ {
+
+
+struct LoadNode_Request_ {
+string package_name_;
+string plugin_name_;
+string node_name_;
+string node_namespace_;
+octet log_level_;
+sequence<string> remap_rules_;
+
+sequence<rcl_interfaces::msg::dds_::Parameter_> parameters_;
+
+sequence<rcl_interfaces::msg::dds_::Parameter_> extra_arguments_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module composition_interfaces
+
+
+module composition_interfaces {
+
+module srv {
+
+module dds_ {
+
+
+struct LoadNode_Response_ {
+boolean success_;
+string error_message_;
+string full_node_name_;
+unsigned long long unique_id_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module composition_interfaces
+
+
+#endif  // __composition_interfaces__srv__load_node__idl__

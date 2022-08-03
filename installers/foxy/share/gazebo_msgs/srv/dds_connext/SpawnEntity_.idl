@@ -1,0 +1,55 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:srv/SpawnEntity.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Pose_.idl"
+
+#ifndef __gazebo_msgs__srv__spawn_entity__idl__
+#define __gazebo_msgs__srv__spawn_entity__idl__
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SpawnEntity_Request_ {
+string name_;
+string xml_;
+string robot_namespace_;
+geometry_msgs::msg::dds_::Pose_ initial_pose_;
+string reference_frame_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SpawnEntity_Response_ {
+boolean success_;
+string status_message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__srv__spawn_entity__idl__

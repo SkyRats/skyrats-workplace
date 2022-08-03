@@ -1,0 +1,55 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:srv/SetPhysicsProperties.idl
+// generated code does not contain a copyright notice
+#include "gazebo_msgs/msg/dds_connext/ODEPhysics_.idl"
+#include "geometry_msgs/msg/dds_connext/Vector3_.idl"
+
+#ifndef __gazebo_msgs__srv__set_physics_properties__idl__
+#define __gazebo_msgs__srv__set_physics_properties__idl__
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetPhysicsProperties_Request_ {
+double time_step_;
+double max_update_rate_;
+geometry_msgs::msg::dds_::Vector3_ gravity_;
+gazebo_msgs::msg::dds_::ODEPhysics_ ode_config_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetPhysicsProperties_Response_ {
+boolean success_;
+string status_message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__srv__set_physics_properties__idl__

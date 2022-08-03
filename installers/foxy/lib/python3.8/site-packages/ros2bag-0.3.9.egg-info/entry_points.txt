@@ -1,0 +1,11 @@
+[ros2bag.verb]
+info = ros2bag.verb.info:InfoVerb
+play = ros2bag.verb.play:PlayVerb
+record = ros2bag.verb.record:RecordVerb
+
+[ros2cli.command]
+bag = ros2bag.command.bag:BagCommand
+
+[ros2cli.extension_point]
+ros2bag.verb = ros2bag.verb:VerbExtension
+

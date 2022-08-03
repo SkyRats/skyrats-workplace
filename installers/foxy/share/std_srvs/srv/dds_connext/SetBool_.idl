@@ -1,0 +1,50 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from std_srvs:srv/SetBool.idl
+// generated code does not contain a copyright notice
+
+#ifndef __std_srvs__srv__set_bool__idl__
+#define __std_srvs__srv__set_bool__idl__
+
+
+module std_srvs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetBool_Request_ {
+boolean data_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module std_srvs
+
+
+module std_srvs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetBool_Response_ {
+boolean success_;
+string message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module std_srvs
+
+
+#endif  // __std_srvs__srv__set_bool__idl__

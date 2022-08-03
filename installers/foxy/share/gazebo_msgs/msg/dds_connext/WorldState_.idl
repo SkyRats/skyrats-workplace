@@ -1,0 +1,41 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:msg/WorldState.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Pose_.idl"
+#include "geometry_msgs/msg/dds_connext/Twist_.idl"
+#include "geometry_msgs/msg/dds_connext/Wrench_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __gazebo_msgs__msg__world_state__idl__
+#define __gazebo_msgs__msg__world_state__idl__
+
+
+module gazebo_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct WorldState_ {
+std_msgs::msg::dds_::Header_ header_;
+sequence<string> name_;
+
+sequence<geometry_msgs::msg::dds_::Pose_> pose_;
+
+sequence<geometry_msgs::msg::dds_::Twist_> twist_;
+
+sequence<geometry_msgs::msg::dds_::Wrench_> wrench_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__msg__world_state__idl__

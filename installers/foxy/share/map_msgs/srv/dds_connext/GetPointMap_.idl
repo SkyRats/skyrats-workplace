@@ -1,0 +1,50 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from map_msgs:srv/GetPointMap.idl
+// generated code does not contain a copyright notice
+#include "sensor_msgs/msg/dds_connext/PointCloud2_.idl"
+
+#ifndef __map_msgs__srv__get_point_map__idl__
+#define __map_msgs__srv__get_point_map__idl__
+
+
+module map_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetPointMap_Request_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module map_msgs
+
+
+module map_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetPointMap_Response_ {
+sensor_msgs::msg::dds_::PointCloud2_ map_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module map_msgs
+
+
+#endif  // __map_msgs__srv__get_point_map__idl__

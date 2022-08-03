@@ -1,0 +1,36 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:msg/ModelStates.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Pose_.idl"
+#include "geometry_msgs/msg/dds_connext/Twist_.idl"
+
+#ifndef __gazebo_msgs__msg__model_states__idl__
+#define __gazebo_msgs__msg__model_states__idl__
+
+
+module gazebo_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct ModelStates_ {
+sequence<string> name_;
+
+sequence<geometry_msgs::msg::dds_::Pose_> pose_;
+
+sequence<geometry_msgs::msg::dds_::Twist_> twist_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__msg__model_states__idl__

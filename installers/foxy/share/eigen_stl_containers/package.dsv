@@ -1,0 +1,4 @@
+source;share/eigen_stl_containers/local_setup.bash
+source;share/eigen_stl_containers/local_setup.dsv
+source;share/eigen_stl_containers/local_setup.sh
+source;share/eigen_stl_containers/local_setup.zsh

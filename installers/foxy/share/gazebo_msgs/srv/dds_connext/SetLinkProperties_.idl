@@ -1,0 +1,60 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:srv/SetLinkProperties.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Pose_.idl"
+
+#ifndef __gazebo_msgs__srv__set_link_properties__idl__
+#define __gazebo_msgs__srv__set_link_properties__idl__
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetLinkProperties_Request_ {
+string link_name_;
+geometry_msgs::msg::dds_::Pose_ com_;
+boolean gravity_mode_;
+double mass_;
+double ixx_;
+double ixy_;
+double ixz_;
+double iyy_;
+double iyz_;
+double izz_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetLinkProperties_Response_ {
+boolean success_;
+string status_message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__srv__set_link_properties__idl__

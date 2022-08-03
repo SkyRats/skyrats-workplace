@@ -1,0 +1,50 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:srv/SetEntityState.idl
+// generated code does not contain a copyright notice
+#include "gazebo_msgs/msg/dds_connext/EntityState_.idl"
+
+#ifndef __gazebo_msgs__srv__set_entity_state__idl__
+#define __gazebo_msgs__srv__set_entity_state__idl__
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetEntityState_Request_ {
+gazebo_msgs::msg::dds_::EntityState_ state_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetEntityState_Response_ {
+boolean success_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__srv__set_entity_state__idl__

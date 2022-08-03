@@ -1,0 +1,51 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:srv/SetModelState.idl
+// generated code does not contain a copyright notice
+#include "gazebo_msgs/msg/dds_connext/ModelState_.idl"
+
+#ifndef __gazebo_msgs__srv__set_model_state__idl__
+#define __gazebo_msgs__srv__set_model_state__idl__
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetModelState_Request_ {
+gazebo_msgs::msg::dds_::ModelState_ model_state_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetModelState_Response_ {
+boolean success_;
+string status_message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__srv__set_model_state__idl__

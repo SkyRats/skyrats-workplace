@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: quality-of-service-demo-py
+Version: 0.9.3
+Summary: Python nodes to demonstrate ROS2 QoS policies.
+Home-page: UNKNOWN
+Author: Emerson Knapp
+Maintainer: Amazon ROS Contributions
+Maintainer-email: ros-contributions@amazon.com
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Keywords: ROS
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development

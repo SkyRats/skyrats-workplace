@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: action-tutorials-py
+Version: 0.9.3
+Summary: Python action tutorials code.
+Home-page: UNKNOWN
+Author: Jacob Perron
+Author-email: jacob@openrobotics.org
+Maintainer: Jacob Perron
+Maintainer-email: jacob@openrobotics.org
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Keywords: ROS
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development

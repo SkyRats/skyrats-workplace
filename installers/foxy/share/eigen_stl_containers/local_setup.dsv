@@ -1,0 +1,2 @@
+source;share/eigen_stl_containers/environment/ament_prefix_path.sh
+source;share/eigen_stl_containers/environment/path.sh

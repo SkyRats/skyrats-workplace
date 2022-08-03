@@ -1,0 +1,55 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:srv/ApplyJointEffort.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Duration_.idl"
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+
+#ifndef __gazebo_msgs__srv__apply_joint_effort__idl__
+#define __gazebo_msgs__srv__apply_joint_effort__idl__
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct ApplyJointEffort_Request_ {
+string joint_name_;
+double effort_;
+builtin_interfaces::msg::dds_::Time_ start_time_;
+builtin_interfaces::msg::dds_::Duration_ duration_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct ApplyJointEffort_Response_ {
+boolean success_;
+string status_message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__srv__apply_joint_effort__idl__

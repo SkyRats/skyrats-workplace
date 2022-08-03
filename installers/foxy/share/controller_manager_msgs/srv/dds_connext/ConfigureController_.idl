@@ -1,0 +1,49 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller_manager_msgs:srv/ConfigureController.idl
+// generated code does not contain a copyright notice
+
+#ifndef __controller_manager_msgs__srv__configure_controller__idl__
+#define __controller_manager_msgs__srv__configure_controller__idl__
+
+
+module controller_manager_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct ConfigureController_Request_ {
+string name_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module controller_manager_msgs
+
+
+module controller_manager_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct ConfigureController_Response_ {
+boolean ok_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module controller_manager_msgs
+
+
+#endif  // __controller_manager_msgs__srv__configure_controller__idl__

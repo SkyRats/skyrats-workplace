@@ -1,0 +1,59 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:srv/ApplyBodyWrench.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Duration_.idl"
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+#include "geometry_msgs/msg/dds_connext/Point_.idl"
+#include "geometry_msgs/msg/dds_connext/Wrench_.idl"
+
+#ifndef __gazebo_msgs__srv__apply_body_wrench__idl__
+#define __gazebo_msgs__srv__apply_body_wrench__idl__
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct ApplyBodyWrench_Request_ {
+string body_name_;
+string reference_frame_;
+geometry_msgs::msg::dds_::Point_ reference_point_;
+geometry_msgs::msg::dds_::Wrench_ wrench_;
+builtin_interfaces::msg::dds_::Time_ start_time_;
+builtin_interfaces::msg::dds_::Duration_ duration_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct ApplyBodyWrench_Response_ {
+boolean success_;
+string status_message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__srv__apply_body_wrench__idl__

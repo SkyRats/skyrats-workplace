@@ -1,0 +1,51 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller_manager_msgs:srv/ListControllers.idl
+// generated code does not contain a copyright notice
+#include "controller_manager_msgs/msg/dds_connext/ControllerState_.idl"
+
+#ifndef __controller_manager_msgs__srv__list_controllers__idl__
+#define __controller_manager_msgs__srv__list_controllers__idl__
+
+
+module controller_manager_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct ListControllers_Request_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module controller_manager_msgs
+
+
+module controller_manager_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct ListControllers_Response_ {
+sequence<controller_manager_msgs::msg::dds_::ControllerState_> controller_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module controller_manager_msgs
+
+
+#endif  // __controller_manager_msgs__srv__list_controllers__idl__

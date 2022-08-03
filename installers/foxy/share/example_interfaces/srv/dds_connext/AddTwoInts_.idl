@@ -1,0 +1,50 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from example_interfaces:srv/AddTwoInts.idl
+// generated code does not contain a copyright notice
+
+#ifndef __example_interfaces__srv__add_two_ints__idl__
+#define __example_interfaces__srv__add_two_ints__idl__
+
+
+module example_interfaces {
+
+module srv {
+
+module dds_ {
+
+
+struct AddTwoInts_Request_ {
+long long a_;
+long long b_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module example_interfaces
+
+
+module example_interfaces {
+
+module srv {
+
+module dds_ {
+
+
+struct AddTwoInts_Response_ {
+long long sum_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module example_interfaces
+
+
+#endif  // __example_interfaces__srv__add_two_ints__idl__

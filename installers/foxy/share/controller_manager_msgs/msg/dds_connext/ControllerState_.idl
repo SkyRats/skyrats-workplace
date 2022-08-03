@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from controller_manager_msgs:msg/ControllerState.idl
+// generated code does not contain a copyright notice
+
+#ifndef __controller_manager_msgs__msg__controller_state__idl__
+#define __controller_manager_msgs__msg__controller_state__idl__
+
+
+module controller_manager_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct ControllerState_ {
+string name_;
+string state_;
+string type_;
+sequence<string> claimed_interfaces_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module controller_manager_msgs
+
+
+#endif  // __controller_manager_msgs__msg__controller_state__idl__

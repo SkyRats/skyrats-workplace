@@ -1,0 +1,12 @@
+prefix=/tmp/binarydeb/ros-foxy-rviz-ogre-vendor-8.2.6/obj-x86_64-linux-gnu/ogre_install
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+plugindir=${libdir}/OGRE
+
+Name: OGRE
+Description: Object-Oriented Graphics Rendering Engine
+Version: 1.12.1
+URL: http://www.ogre3d.org
+Libs: -L${libdir} -lOgreMain 
+Cflags: -I${includedir} -I${includedir}/OGRE  

@@ -1,0 +1,42 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:msg/ContactState.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Vector3_.idl"
+#include "geometry_msgs/msg/dds_connext/Wrench_.idl"
+
+#ifndef __gazebo_msgs__msg__contact_state__idl__
+#define __gazebo_msgs__msg__contact_state__idl__
+
+
+module gazebo_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct ContactState_ {
+string info_;
+string collision1_name_;
+string collision2_name_;
+sequence<geometry_msgs::msg::dds_::Wrench_> wrenches_;
+
+geometry_msgs::msg::dds_::Wrench_ total_wrench_;
+sequence<geometry_msgs::msg::dds_::Vector3_> contact_positions_;
+
+sequence<geometry_msgs::msg::dds_::Vector3_> contact_normals_;
+
+sequence<double> depths_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__msg__contact_state__idl__

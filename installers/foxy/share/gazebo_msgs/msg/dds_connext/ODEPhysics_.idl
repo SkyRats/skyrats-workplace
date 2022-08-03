@@ -1,0 +1,38 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:msg/ODEPhysics.idl
+// generated code does not contain a copyright notice
+
+#ifndef __gazebo_msgs__msg__ode_physics__idl__
+#define __gazebo_msgs__msg__ode_physics__idl__
+
+
+module gazebo_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct ODEPhysics_ {
+boolean auto_disable_bodies_;
+unsigned long sor_pgs_precon_iters_;
+unsigned long sor_pgs_iters_;
+double sor_pgs_w_;
+double sor_pgs_rms_error_tol_;
+double contact_surface_layer_;
+double contact_max_correcting_vel_;
+double cfm_;
+double erp_;
+unsigned long max_contacts_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__msg__ode_physics__idl__

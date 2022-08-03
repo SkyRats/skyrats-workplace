@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from controller_manager_msgs/srv/ConfigureStartController.srv
+// generated code does not contain a copyright notice
+
+
+module controller_manager_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " The ConfigureStartController service allows you to configure and start a single controller" "\n"
+      " inside controller_manager")
+    struct ConfigureStartController_Request {
+      @verbatim (language="comment", text=
+        " To configure and start a controller, specify the \"name\" of the controller." "\n"
+        " The return value \"ok\" indicates if the controller was successfully" "\n"
+        " configured and started or not.")
+      string name;
+    };
+    struct ConfigureStartController_Response {
+      boolean ok;
+    };
+  };
+};

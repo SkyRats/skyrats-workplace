@@ -1,0 +1,11 @@
+prefix=/tmp/binarydeb/ros-foxy-rviz-ogre-vendor-8.2.6/obj-x86_64-linux-gnu/ogre_install
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: OGRE-PCZ
+Description: Portal-Connected Zone Scene Manager for OGRE
+Version: 1.12.1
+Requires: OGRE = 1.12.1
+Libs: ${libdir}/OGRE/Plugin_PCZSceneManager.so ${libdir}/OGRE/Plugin_OctreeZone.so -Wl,-rpath,${libdir}/OGRE
+Cflags: -I${includedir}/OGRE/Plugins/PCZSceneManager -I${includedir}/OGRE/Plugins/OctreeZone 

@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from example_interfaces:msg/MultiArrayDimension.idl
+// generated code does not contain a copyright notice
+
+#ifndef __example_interfaces__msg__multi_array_dimension__idl__
+#define __example_interfaces__msg__multi_array_dimension__idl__
+
+
+module example_interfaces {
+
+module msg {
+
+module dds_ {
+
+
+struct MultiArrayDimension_ {
+string label_;
+unsigned long size_;
+unsigned long stride_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module example_interfaces
+
+
+#endif  // __example_interfaces__msg__multi_array_dimension__idl__

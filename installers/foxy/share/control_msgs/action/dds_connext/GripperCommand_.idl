@@ -1,0 +1,182 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from control_msgs:action/GripperCommand.idl
+// generated code does not contain a copyright notice
+#include "control_msgs/msg/dds_connext/GripperCommand_.idl"
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+#include "unique_identifier_msgs/msg/dds_connext/UUID_.idl"
+
+#ifndef __control_msgs__action__gripper_command__idl__
+#define __control_msgs__action__gripper_command__idl__
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct GripperCommand_Goal_ {
+control_msgs::msg::dds_::GripperCommand_ command_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct GripperCommand_SendGoal_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+control_msgs::action::dds_::GripperCommand_Goal_ goal_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct GripperCommand_SendGoal_Response_ {
+boolean accepted_;
+builtin_interfaces::msg::dds_::Time_ stamp_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct GripperCommand_Result_ {
+double position_;
+double effort_;
+boolean stalled_;
+boolean reached_goal_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct GripperCommand_GetResult_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct GripperCommand_GetResult_Response_ {
+octet status_;
+control_msgs::action::dds_::GripperCommand_Result_ result_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct GripperCommand_Feedback_ {
+double position_;
+double effort_;
+boolean stalled_;
+boolean reached_goal_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct GripperCommand_FeedbackMessage_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+control_msgs::action::dds_::GripperCommand_Feedback_ feedback_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+#endif  // __control_msgs__action__gripper_command__idl__

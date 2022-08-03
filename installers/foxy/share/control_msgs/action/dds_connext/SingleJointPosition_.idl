@@ -1,0 +1,182 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from control_msgs:action/SingleJointPosition.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Duration_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+#include "unique_identifier_msgs/msg/dds_connext/UUID_.idl"
+
+#ifndef __control_msgs__action__single_joint_position__idl__
+#define __control_msgs__action__single_joint_position__idl__
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct SingleJointPosition_Goal_ {
+double position_;
+builtin_interfaces::msg::dds_::Duration_ min_duration_;
+double max_velocity_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct SingleJointPosition_SendGoal_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+control_msgs::action::dds_::SingleJointPosition_Goal_ goal_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct SingleJointPosition_SendGoal_Response_ {
+boolean accepted_;
+builtin_interfaces::msg::dds_::Time_ stamp_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct SingleJointPosition_Result_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct SingleJointPosition_GetResult_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct SingleJointPosition_GetResult_Response_ {
+octet status_;
+control_msgs::action::dds_::SingleJointPosition_Result_ result_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct SingleJointPosition_Feedback_ {
+std_msgs::msg::dds_::Header_ header_;
+double position_;
+double velocity_;
+double error_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct SingleJointPosition_FeedbackMessage_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+control_msgs::action::dds_::SingleJointPosition_Feedback_ feedback_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+#endif  // __control_msgs__action__single_joint_position__idl__

@@ -1,0 +1,59 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from control_msgs:srv/QueryTrajectoryState.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+
+#ifndef __control_msgs__srv__query_trajectory_state__idl__
+#define __control_msgs__srv__query_trajectory_state__idl__
+
+
+module control_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct QueryTrajectoryState_Request_ {
+builtin_interfaces::msg::dds_::Time_ time_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct QueryTrajectoryState_Response_ {
+boolean success_;
+string message_;
+sequence<string> name_;
+
+sequence<double> position_;
+
+sequence<double> velocity_;
+
+sequence<double> acceleration_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module control_msgs
+
+
+#endif  // __control_msgs__srv__query_trajectory_state__idl__

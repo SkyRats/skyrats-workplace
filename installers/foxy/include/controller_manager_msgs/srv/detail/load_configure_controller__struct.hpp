@@ -1,0 +1,260 @@
+// generated from rosidl_generator_cpp/resource/idl__struct.hpp.em
+// with input from controller_manager_msgs:srv/LoadConfigureController.idl
+// generated code does not contain a copyright notice
+
+#ifndef CONTROLLER_MANAGER_MSGS__SRV__DETAIL__LOAD_CONFIGURE_CONTROLLER__STRUCT_HPP_
+#define CONTROLLER_MANAGER_MSGS__SRV__DETAIL__LOAD_CONFIGURE_CONTROLLER__STRUCT_HPP_
+
+#include <rosidl_runtime_cpp/bounded_vector.hpp>
+#include <rosidl_runtime_cpp/message_initialization.hpp>
+#include <algorithm>
+#include <array>
+#include <memory>
+#include <string>
+#include <vector>
+
+
+#ifndef _WIN32
+# define DEPRECATED__controller_manager_msgs__srv__LoadConfigureController_Request __attribute__((deprecated))
+#else
+# define DEPRECATED__controller_manager_msgs__srv__LoadConfigureController_Request __declspec(deprecated)
+#endif
+
+namespace controller_manager_msgs
+{
+
+namespace srv
+{
+
+// message struct
+template<class ContainerAllocator>
+struct LoadConfigureController_Request_
+{
+  using Type = LoadConfigureController_Request_<ContainerAllocator>;
+
+  explicit LoadConfigureController_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  {
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->name = "";
+    }
+  }
+
+  explicit LoadConfigureController_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : name(_alloc)
+  {
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->name = "";
+    }
+  }
+
+  // field types and members
+  using _name_type =
+    std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
+  _name_type name;
+
+  // setters for named parameter idiom
+  Type & set__name(
+    const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
+  {
+    this->name = _arg;
+    return *this;
+  }
+
+  // constant declarations
+
+  // pointer types
+  using RawPtr =
+    controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator> *;
+  using ConstRawPtr =
+    const controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator> *;
+  using SharedPtr =
+    std::shared_ptr<controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator>>;
+  using ConstSharedPtr =
+    std::shared_ptr<controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator> const>;
+
+  template<typename Deleter = std::default_delete<
+      controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator>>>
+  using UniquePtrWithDeleter =
+    std::unique_ptr<controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator>, Deleter>;
+
+  using UniquePtr = UniquePtrWithDeleter<>;
+
+  template<typename Deleter = std::default_delete<
+      controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator>>>
+  using ConstUniquePtrWithDeleter =
+    std::unique_ptr<controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator> const, Deleter>;
+  using ConstUniquePtr = ConstUniquePtrWithDeleter<>;
+
+  using WeakPtr =
+    std::weak_ptr<controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator>>;
+  using ConstWeakPtr =
+    std::weak_ptr<controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator> const>;
+
+  // pointer types similar to ROS 1, use SharedPtr / ConstSharedPtr instead
+  // NOTE: Can't use 'using' here because GNU C++ can't parse attributes properly
+  typedef DEPRECATED__controller_manager_msgs__srv__LoadConfigureController_Request
+    std::shared_ptr<controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator>>
+    Ptr;
+  typedef DEPRECATED__controller_manager_msgs__srv__LoadConfigureController_Request
+    std::shared_ptr<controller_manager_msgs::srv::LoadConfigureController_Request_<ContainerAllocator> const>
+    ConstPtr;
+
+  // comparison operators
+  bool operator==(const LoadConfigureController_Request_ & other) const
+  {
+    if (this->name != other.name) {
+      return false;
+    }
+    return true;
+  }
+  bool operator!=(const LoadConfigureController_Request_ & other) const
+  {
+    return !this->operator==(other);
+  }
+};  // struct LoadConfigureController_Request_
+
+// alias to use template instance with default allocator
+using LoadConfigureController_Request =
+  controller_manager_msgs::srv::LoadConfigureController_Request_<std::allocator<void>>;
+
+// constant definitions
+
+}  // namespace srv
+
+}  // namespace controller_manager_msgs
+
+
+#ifndef _WIN32
+# define DEPRECATED__controller_manager_msgs__srv__LoadConfigureController_Response __attribute__((deprecated))
+#else
+# define DEPRECATED__controller_manager_msgs__srv__LoadConfigureController_Response __declspec(deprecated)
+#endif
+
+namespace controller_manager_msgs
+{
+
+namespace srv
+{
+
+// message struct
+template<class ContainerAllocator>
+struct LoadConfigureController_Response_
+{
+  using Type = LoadConfigureController_Response_<ContainerAllocator>;
+
+  explicit LoadConfigureController_Response_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  {
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->ok = false;
+    }
+  }
+
+  explicit LoadConfigureController_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  {
+    (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->ok = false;
+    }
+  }
+
+  // field types and members
+  using _ok_type =
+    bool;
+  _ok_type ok;
+
+  // setters for named parameter idiom
+  Type & set__ok(
+    const bool & _arg)
+  {
+    this->ok = _arg;
+    return *this;
+  }
+
+  // constant declarations
+
+  // pointer types
+  using RawPtr =
+    controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator> *;
+  using ConstRawPtr =
+    const controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator> *;
+  using SharedPtr =
+    std::shared_ptr<controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator>>;
+  using ConstSharedPtr =
+    std::shared_ptr<controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator> const>;
+
+  template<typename Deleter = std::default_delete<
+      controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator>>>
+  using UniquePtrWithDeleter =
+    std::unique_ptr<controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator>, Deleter>;
+
+  using UniquePtr = UniquePtrWithDeleter<>;
+
+  template<typename Deleter = std::default_delete<
+      controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator>>>
+  using ConstUniquePtrWithDeleter =
+    std::unique_ptr<controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator> const, Deleter>;
+  using ConstUniquePtr = ConstUniquePtrWithDeleter<>;
+
+  using WeakPtr =
+    std::weak_ptr<controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator>>;
+  using ConstWeakPtr =
+    std::weak_ptr<controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator> const>;
+
+  // pointer types similar to ROS 1, use SharedPtr / ConstSharedPtr instead
+  // NOTE: Can't use 'using' here because GNU C++ can't parse attributes properly
+  typedef DEPRECATED__controller_manager_msgs__srv__LoadConfigureController_Response
+    std::shared_ptr<controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator>>
+    Ptr;
+  typedef DEPRECATED__controller_manager_msgs__srv__LoadConfigureController_Response
+    std::shared_ptr<controller_manager_msgs::srv::LoadConfigureController_Response_<ContainerAllocator> const>
+    ConstPtr;
+
+  // comparison operators
+  bool operator==(const LoadConfigureController_Response_ & other) const
+  {
+    if (this->ok != other.ok) {
+      return false;
+    }
+    return true;
+  }
+  bool operator!=(const LoadConfigureController_Response_ & other) const
+  {
+    return !this->operator==(other);
+  }
+};  // struct LoadConfigureController_Response_
+
+// alias to use template instance with default allocator
+using LoadConfigureController_Response =
+  controller_manager_msgs::srv::LoadConfigureController_Response_<std::allocator<void>>;
+
+// constant definitions
+
+}  // namespace srv
+
+}  // namespace controller_manager_msgs
+
+namespace controller_manager_msgs
+{
+
+namespace srv
+{
+
+struct LoadConfigureController
+{
+  using Request = controller_manager_msgs::srv::LoadConfigureController_Request;
+  using Response = controller_manager_msgs::srv::LoadConfigureController_Response;
+};
+
+}  // namespace srv
+
+}  // namespace controller_manager_msgs
+
+#endif  // CONTROLLER_MANAGER_MSGS__SRV__DETAIL__LOAD_CONFIGURE_CONTROLLER__STRUCT_HPP_

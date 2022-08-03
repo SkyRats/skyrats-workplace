@@ -1,0 +1,53 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from turtlesim:srv/SetPen.idl
+// generated code does not contain a copyright notice
+
+#ifndef __turtlesim__srv__set_pen__idl__
+#define __turtlesim__srv__set_pen__idl__
+
+
+module turtlesim {
+
+module srv {
+
+module dds_ {
+
+
+struct SetPen_Request_ {
+octet r_;
+octet g_;
+octet b_;
+octet width_;
+octet off_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module turtlesim
+
+
+module turtlesim {
+
+module srv {
+
+module dds_ {
+
+
+struct SetPen_Response_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module turtlesim
+
+
+#endif  // __turtlesim__srv__set_pen__idl__

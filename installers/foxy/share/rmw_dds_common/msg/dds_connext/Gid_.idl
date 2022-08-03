@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rmw_dds_common:msg/Gid.idl
+// generated code does not contain a copyright notice
+
+#ifndef __rmw_dds_common__msg__gid__idl__
+#define __rmw_dds_common__msg__gid__idl__
+
+
+module rmw_dds_common {
+
+module msg {
+
+module dds_ {
+
+
+struct Gid_ {
+octet data_[24];
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module rmw_dds_common
+
+
+#endif  // __rmw_dds_common__msg__gid__idl__

@@ -1,0 +1,200 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from control_msgs:action/FollowJointTrajectory.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Duration_.idl"
+#include "control_msgs/msg/dds_connext/JointTolerance_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+#include "trajectory_msgs/msg/dds_connext/JointTrajectory_.idl"
+#include "trajectory_msgs/msg/dds_connext/JointTrajectoryPoint_.idl"
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+#include "unique_identifier_msgs/msg/dds_connext/UUID_.idl"
+
+#ifndef __control_msgs__action__follow_joint_trajectory__idl__
+#define __control_msgs__action__follow_joint_trajectory__idl__
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct FollowJointTrajectory_Goal_ {
+trajectory_msgs::msg::dds_::JointTrajectory_ trajectory_;
+sequence<control_msgs::msg::dds_::JointTolerance_> path_tolerance_;
+
+sequence<control_msgs::msg::dds_::JointTolerance_> goal_tolerance_;
+
+builtin_interfaces::msg::dds_::Duration_ goal_time_tolerance_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct FollowJointTrajectory_SendGoal_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+control_msgs::action::dds_::FollowJointTrajectory_Goal_ goal_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct FollowJointTrajectory_SendGoal_Response_ {
+boolean accepted_;
+builtin_interfaces::msg::dds_::Time_ stamp_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+module FollowJointTrajectory_Result_Constants {
+const long SUCCESSFUL_ = 0;
+const long INVALID_GOAL_ = -1;
+const long INVALID_JOINTS_ = -2;
+const long OLD_HEADER_TIMESTAMP_ = -3;
+const long PATH_TOLERANCE_VIOLATED_ = -4;
+const long GOAL_TOLERANCE_VIOLATED_ = -5;
+
+};
+
+struct FollowJointTrajectory_Result_ {
+long error_code_;
+string error_string_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct FollowJointTrajectory_GetResult_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct FollowJointTrajectory_GetResult_Response_ {
+octet status_;
+control_msgs::action::dds_::FollowJointTrajectory_Result_ result_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct FollowJointTrajectory_Feedback_ {
+std_msgs::msg::dds_::Header_ header_;
+sequence<string> joint_names_;
+
+trajectory_msgs::msg::dds_::JointTrajectoryPoint_ desired_;
+trajectory_msgs::msg::dds_::JointTrajectoryPoint_ actual_;
+trajectory_msgs::msg::dds_::JointTrajectoryPoint_ error_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct FollowJointTrajectory_FeedbackMessage_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+control_msgs::action::dds_::FollowJointTrajectory_Feedback_ feedback_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module control_msgs
+
+
+#endif  // __control_msgs__action__follow_joint_trajectory__idl__

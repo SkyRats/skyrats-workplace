@@ -1,0 +1,49 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from control_msgs:srv/QueryCalibrationState.idl
+// generated code does not contain a copyright notice
+
+#ifndef __control_msgs__srv__query_calibration_state__idl__
+#define __control_msgs__srv__query_calibration_state__idl__
+
+
+module control_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct QueryCalibrationState_Request_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module control_msgs
+
+
+module control_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct QueryCalibrationState_Response_ {
+boolean is_calibrated_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module control_msgs
+
+
+#endif  // __control_msgs__srv__query_calibration_state__idl__

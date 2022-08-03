@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from pendulum_msgs:msg/JointState.idl
+// generated code does not contain a copyright notice
+
+#ifndef __pendulum_msgs__msg__joint_state__idl__
+#define __pendulum_msgs__msg__joint_state__idl__
+
+
+module pendulum_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct JointState_ {
+double position_;
+double velocity_;
+double effort_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module pendulum_msgs
+
+
+#endif  // __pendulum_msgs__msg__joint_state__idl__

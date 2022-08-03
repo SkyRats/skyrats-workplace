@@ -1,0 +1,38 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rcl_interfaces:msg/ParameterEvent.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+#include "rcl_interfaces/msg/dds_connext/Parameter_.idl"
+
+#ifndef __rcl_interfaces__msg__parameter_event__idl__
+#define __rcl_interfaces__msg__parameter_event__idl__
+
+
+module rcl_interfaces {
+
+module msg {
+
+module dds_ {
+
+
+struct ParameterEvent_ {
+builtin_interfaces::msg::dds_::Time_ stamp_;
+string node_;
+sequence<rcl_interfaces::msg::dds_::Parameter_> new_parameters_;
+
+sequence<rcl_interfaces::msg::dds_::Parameter_> changed_parameters_;
+
+sequence<rcl_interfaces::msg::dds_::Parameter_> deleted_parameters_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module rcl_interfaces
+
+
+#endif  // __rcl_interfaces__msg__parameter_event__idl__

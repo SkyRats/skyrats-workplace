@@ -1,0 +1,52 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from gazebo_msgs:srv/SetJointProperties.idl
+// generated code does not contain a copyright notice
+#include "gazebo_msgs/msg/dds_connext/ODEJointProperties_.idl"
+
+#ifndef __gazebo_msgs__srv__set_joint_properties__idl__
+#define __gazebo_msgs__srv__set_joint_properties__idl__
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetJointProperties_Request_ {
+string joint_name_;
+gazebo_msgs::msg::dds_::ODEJointProperties_ ode_joint_config_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+module gazebo_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetJointProperties_Response_ {
+boolean success_;
+string status_message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module gazebo_msgs
+
+
+#endif  // __gazebo_msgs__srv__set_joint_properties__idl__

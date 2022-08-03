@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: demo-nodes-py
+Version: 0.9.3
+Summary: Python nodes which were previously in the ros2/examples repository but are now just used for demo purposes.
+Home-page: UNKNOWN
+Author: Esteve Fernandez
+Author-email: esteve@osrfoundation.org
+Maintainer: Mikael Arguedas
+Maintainer-email: mikael@osrfoundation.org
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Keywords: ROS
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development

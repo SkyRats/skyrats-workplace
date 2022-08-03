@@ -1,0 +1,36 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from theora_image_transport:msg/Packet.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __theora_image_transport__msg__packet__idl__
+#define __theora_image_transport__msg__packet__idl__
+
+
+module theora_image_transport {
+
+module msg {
+
+module dds_ {
+
+
+struct Packet_ {
+std_msgs::msg::dds_::Header_ header_;
+sequence<octet> data_;
+
+long b_o_s_;
+long e_o_s_;
+long long granulepos_;
+long long packetno_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module theora_image_transport
+
+
+#endif  // __theora_image_transport__msg__packet__idl__

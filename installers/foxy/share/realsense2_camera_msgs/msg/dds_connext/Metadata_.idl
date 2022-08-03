@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from realsense2_camera_msgs:msg/Metadata.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __realsense2_camera_msgs__msg__metadata__idl__
+#define __realsense2_camera_msgs__msg__metadata__idl__
+
+
+module realsense2_camera_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Metadata_ {
+std_msgs::msg::dds_::Header_ header_;
+string json_data_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module realsense2_camera_msgs
+
+
+#endif  // __realsense2_camera_msgs__msg__metadata__idl__

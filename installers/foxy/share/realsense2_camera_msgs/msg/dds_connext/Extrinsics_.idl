@@ -1,0 +1,32 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from realsense2_camera_msgs:msg/Extrinsics.idl
+// generated code does not contain a copyright notice
+
+#ifndef __realsense2_camera_msgs__msg__extrinsics__idl__
+#define __realsense2_camera_msgs__msg__extrinsics__idl__
+
+
+module realsense2_camera_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Extrinsics_ {
+double rotation_[9];
+
+double translation_[3];
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module realsense2_camera_msgs
+
+
+#endif  // __realsense2_camera_msgs__msg__extrinsics__idl__

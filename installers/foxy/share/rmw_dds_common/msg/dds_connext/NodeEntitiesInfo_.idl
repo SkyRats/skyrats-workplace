@@ -1,0 +1,35 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rmw_dds_common:msg/NodeEntitiesInfo.idl
+// generated code does not contain a copyright notice
+#include "rmw_dds_common/msg/dds_connext/Gid_.idl"
+
+#ifndef __rmw_dds_common__msg__node_entities_info__idl__
+#define __rmw_dds_common__msg__node_entities_info__idl__
+
+
+module rmw_dds_common {
+
+module msg {
+
+module dds_ {
+
+
+struct NodeEntitiesInfo_ {
+string<256> node_namespace_;
+string<256> node_name_;
+sequence<rmw_dds_common::msg::dds_::Gid_> reader_gid_seq_;
+
+sequence<rmw_dds_common::msg::dds_::Gid_> writer_gid_seq_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module rmw_dds_common
+
+
+#endif  // __rmw_dds_common__msg__node_entities_info__idl__

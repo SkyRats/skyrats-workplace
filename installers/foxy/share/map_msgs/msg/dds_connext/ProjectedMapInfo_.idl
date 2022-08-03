@@ -1,0 +1,35 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from map_msgs:msg/ProjectedMapInfo.idl
+// generated code does not contain a copyright notice
+
+#ifndef __map_msgs__msg__projected_map_info__idl__
+#define __map_msgs__msg__projected_map_info__idl__
+
+
+module map_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct ProjectedMapInfo_ {
+string frame_id_;
+double x_;
+double y_;
+double width_;
+double height_;
+double min_z_;
+double max_z_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module map_msgs
+
+
+#endif  // __map_msgs__msg__projected_map_info__idl__

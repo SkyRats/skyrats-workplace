@@ -1,0 +1,43 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from control_msgs:msg/PidState.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Duration_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __control_msgs__msg__pid_state__idl__
+#define __control_msgs__msg__pid_state__idl__
+
+
+module control_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct PidState_ {
+std_msgs::msg::dds_::Header_ header_;
+builtin_interfaces::msg::dds_::Duration_ timestep_;
+double error_;
+double error_dot_;
+double p_error_;
+double i_error_;
+double d_error_;
+double p_term_;
+double i_term_;
+double d_term_;
+double i_max_;
+double i_min_;
+double output_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module control_msgs
+
+
+#endif  // __control_msgs__msg__pid_state__idl__

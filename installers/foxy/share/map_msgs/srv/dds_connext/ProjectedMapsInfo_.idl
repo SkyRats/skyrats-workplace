@@ -1,0 +1,51 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from map_msgs:srv/ProjectedMapsInfo.idl
+// generated code does not contain a copyright notice
+#include "map_msgs/msg/dds_connext/ProjectedMapInfo_.idl"
+
+#ifndef __map_msgs__srv__projected_maps_info__idl__
+#define __map_msgs__srv__projected_maps_info__idl__
+
+
+module map_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct ProjectedMapsInfo_Request_ {
+sequence<map_msgs::msg::dds_::ProjectedMapInfo_> projected_maps_info_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module map_msgs
+
+
+module map_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct ProjectedMapsInfo_Response_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module map_msgs
+
+
+#endif  // __map_msgs__srv__projected_maps_info__idl__
