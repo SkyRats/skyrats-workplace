@@ -18,11 +18,11 @@ sources:
     type: git
     scripts:
       - git submodule update --init --recursive --force
-  - repo: https://github.com/SkyRats/simulation2
+  - repo: git@github.com:SkyRats/simulation2.git
     name: simulation2
     rev: main
     type: git
-  - repo: https://github.com/SkyRats/mavbase2
+  - repo: git@github.com:SkyRats/mavbase2.git
     name: mavbase2
     rev: main
     type: git
