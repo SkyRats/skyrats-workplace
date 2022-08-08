@@ -1,4 +1,0 @@
-source;share/geographic_msgs/local_setup.bash
-source;share/geographic_msgs/local_setup.dsv
-source;share/geographic_msgs/local_setup.sh
-source;share/geographic_msgs/local_setup.zsh
