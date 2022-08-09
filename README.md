@@ -47,8 +47,12 @@ This is the first way to check if the installation succeeded. In case it doesn't
 
 ## Simulation
 
-We will now run your first quadcopter simulation, for that we must compile the PX4 Firmware and make it work with Gazebo, so type the following and select the desired world:
-
+We will now run your first quadcopter simulation, for that we must compile the PX4 Firmware and make it work with Gazebo, so type the following:
+```bash
+cd ~/skyrats-workpace/PX4-Autopilot
+make px4_sitl gazebo
+```
+To use our simulation package (using custom drones and worlds), type the following:
 ```bash
 cd ~/skyrats_ws2/src/simulation2/scripts
 
