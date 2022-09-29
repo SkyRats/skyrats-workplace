@@ -6,12 +6,13 @@ To install in a fresh ubuntu follow these steps:
 ```bash
 mkdir -p skyrats_ws/src
 
-cd skyrats_ws/src
-
 sudo apt-get install git
 ```
-At this point you might want to configure your git ssh key before proceeding
+At this point you might want to configure your git ssh key before proceeding.
+
 ```bash
+cd skyrats_ws/src
+
 git clone git@github.com:SkyRats/skyrats-workplace.git -b ros1 --single-branch
 
 cd skyrats-workplace/installers
